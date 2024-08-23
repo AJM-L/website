@@ -1,0 +1,17 @@
+.emailAddress {
+    color:lightgray;
+}
+.contactInfo {
+    color:lightgray;
+    margin: 10px 10px;
+}
+
+.heading {
+    margin-bottom: 5px;
+}
+
+.mainTitle {
+    text-align: center;
+    font-size: x-large;
+    color: goldenrod;
+}

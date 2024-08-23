@@ -1,0 +1,19 @@
+hr.solid {
+    border-top: 3px solid rgb(30, 30, 30);
+    border-color: darkgray;
+  }
+
+.dividerContainer {
+    margin-top:30px;
+    margin-bottom:30px;
+    padding: 10px;
+}
+
+.dividerTop {
+    height: 30px;
+}
+
+.dividerBottom {
+    height:30px;
+}
+  

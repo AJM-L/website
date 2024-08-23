@@ -1,0 +1,30 @@
+.heroImage {
+    top:0;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image within the element */
+    background-size: cover;
+    min-height: 400px;
+}
+
+.landingSiteTitle {
+    text-align: center;
+    margin:10px auto;
+}
+
+
+.landingPersonalTitle {
+    text-align: center;
+    margin:10px auto;
+}
+
+.landingHeadshot {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 100%;
+    border: 5px solid #555;
+    display: block;
+    margin: 20px auto;
+    margin-top:25vh;
+    object-fit: cover;
+}

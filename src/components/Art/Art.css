@@ -1,0 +1,50 @@
+@media screen and (min-width: 725px) {
+    .artContainer {
+        display:flex;
+        flex-direction: row;
+    }
+    .image1 {
+        width:48%;
+        margin:0px 1%;
+    }
+    .descriptionContainer{
+        margin-left:15px;
+        margin-bottom:0px;
+        margin-top:auto;
+        display:flex;
+        height:min-content;
+    }
+    .artTitle {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .artContainer {
+        display:flex;
+        flex-direction: column;
+    }
+    .image1 {
+        width:90%;
+        margin:auto;
+    }
+
+    .descriptionContainer{
+        margin-left:15px;
+        margin-top:20px;
+        display:flex;
+    }
+
+    .artTitle {
+        margin-bottom: 10px;
+        display:flex;
+    }
+}
+
+.divider{
+    height:50px;
+}
+
+.mainTitle {
+    margin:25px 0;
+}

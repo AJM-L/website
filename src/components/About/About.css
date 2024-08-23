@@ -1,0 +1,74 @@
+
+@media screen and (min-width: 725px) {
+    .aboutSection {
+        display: flex;
+        flex-direction: row;
+    }
+    .profileSection {
+        width:30%;
+        margin: 10px 5%;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+    .personalDescriptionContainer {
+        width:70%;
+        margin:10px 5%;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+    .personalDescription {
+        font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .aboutSection {
+        display: flex;
+        flex-direction: column;
+    }
+    .profileSection {
+        width:75%;
+        margin: 10px auto;
+    }
+    .personalDescriptionContainer {
+        width:90%;
+        margin:10px auto;
+    }
+    .personalDescription {
+        font-size: large;
+    }
+}
+
+.Headshot {
+    width: 100%;
+    border-radius: 100%;
+    margin-top: 10px;
+    border:2px solid black;
+    transition: transform 2s ease-in-out; /* Smooth transition on transform */
+}
+
+.Headshot:hover {
+    transform: rotate(360deg); /* Rotate image on hover */
+}
+.introText {
+    margin: 10px 10px;
+    text-align: center;
+    text-align: center;
+    font-size: x-large;
+    color: goldenrod;
+    
+}
+
+
+
+.personalDescription {
+    width:100%;
+    margin:10px auto;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+
+
