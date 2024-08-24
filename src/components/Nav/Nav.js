@@ -34,15 +34,15 @@ export default function Nav () {
             </a>
             <p className="navbarSeparator">|</p>
             <nav className={`navbarItems ${openNav ? "open" : "closed"}`}>
-              <a href="/projects" className="navbarItem">
+              <a href="#/projects" className="navbarItem">
                 Projects
               </a>
-              <a href="/Art" className="navbarItem">
+              <a href="#/Art" className="navbarItem">
                 Art
               </a>
             </nav>
             <a
-              href="/Contact"
+              href="#/Contact"
               className="navbarContactBtn">
                 <img src={contactIcon} className="contactIcon" alt="contact"></img>
               Contact
