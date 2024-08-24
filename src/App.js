@@ -17,7 +17,7 @@ import ContactPage from './pages/ContactPage';
 function App() {
   return (
     <div>
-    <HashRouter>
+    <HashRouter basename={"/"}>
       <Nav />
       <Routes>
       <Route path="/" element={<Home />} />
