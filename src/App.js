@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  HashRouter,
 } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Home from "./pages/Home"
@@ -16,16 +17,16 @@ import ContactPage from './pages/ContactPage';
 function App() {
   return (
     <div>
-    <Router>
+    <HashRouter>
       <Nav />
       <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route exact path="/Projects" element={<ProjectsPage />} />
-      <Route exact path="/Art" element={<ArtPage />} />
-      <Route exact path="/Contact" element={<ContactPage />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/Projects" element={<ProjectsPage />} />
+      <Route path="/Art" element={<ArtPage />} />
+      <Route path="/Contact" element={<ContactPage />} />
       </Routes>
       <Footer />
-    </Router>
+    </HashRouter>
     </div>
   );
 }
