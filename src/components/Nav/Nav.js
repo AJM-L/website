@@ -29,7 +29,7 @@ export default function Nav () {
     return (
         <header className="navbar" style={scrollDirection != "up" ? styles.active: styles.hidden}   >
           <div className="navbar" >
-            <a href="/" className="navbarName">
+            <a href="#/" className="navbarName">
                 AJ Matheson-Lieber
             </a>
             <p className="navbarSeparator">|</p>

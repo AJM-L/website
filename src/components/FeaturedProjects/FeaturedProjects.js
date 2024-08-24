@@ -32,7 +32,7 @@ export default function FeaturedProjects() {
             { FeaturedData.map((project) => {
                 return(
                 <li className="project" key={project.id}>
-                    <a href="/projects/#SpotifyCoverGenerator" className="FeaturedContainer">
+                    <a href={project.githubLink} className="FeaturedContainer">
                         <h3 className="projectTitle">Playlist Cover Art Generator</h3>
                         <img src={project.image} alt="Spotify Playlist Cover Image" className="FeaturedPhoto"></img>
                         <div className="descriptionContainer">
