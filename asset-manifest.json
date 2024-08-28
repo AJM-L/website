@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.a78828e6.css",
-    "main.js": "/website/static/js/main.aad0f74c.js",
-    "static/js/453.bb828c5d.chunk.js": "/website/static/js/453.bb828c5d.chunk.js",
+    "main.css": "/website/static/css/main.426ba4b3.css",
+    "main.js": "/website/static/js/main.ff7848bb.js",
+    "static/js/453.b03e3c98.chunk.js": "/website/static/js/453.b03e3c98.chunk.js",
     "static/media/Poster1.png": "/website/static/media/Poster1.f71ee06fcf290d7a42f8.png",
     "static/media/Lizzie'sPoster.png": "/website/static/media/Lizzie'sPoster.2e7d1b2db0e5bb3d4f47.png",
     "static/media/Reach.png": "/website/static/media/Reach.9f3ecb3c759edad73fdf.png",
@@ -14,11 +14,13 @@
     "static/media/L3.png": "/website/static/media/L3.c68fba270ef92e554ac3.png",
     "static/media/Series.png": "/website/static/media/Series.1c108badedd7f5f06324.png",
     "static/media/ShesSoBabygirlShesSoCoquette.png": "/website/static/media/ShesSoBabygirlShesSoCoquette.1d8f3a082efb79293ebc.png",
+    "static/media/FakePins.png": "/website/static/media/FakePins.2068404477d65d8fe501.png",
     "static/media/VMXMXXV.jpg": "/website/static/media/VMXMXXV.dd71c33b74592af2a21c.jpg",
     "static/media/Poster2.png": "/website/static/media/Poster2.9ef8f3b781a8afd295a0.png",
     "static/media/Hero.JPG": "/website/static/media/Hero.42789b4c9e8138240c9c.JPG",
     "static/media/Wireframe.png": "/website/static/media/Wireframe.a52b30227a03b8b1bfa1.png",
     "static/media/Headshot.JPG": "/website/static/media/Headshot.95d7bc535122ffbfade0.JPG",
+    "static/media/PinterestHomepage.png": "/website/static/media/PinterestHomepage.2c804359d4755d0640c7.png",
     "static/media/Screenshot 2024-07-25 at 2.46.08 PM.png": "/website/static/media/Screenshot 2024-07-25 at 2.46.08 PM.0aaf2b88b6dcdd176811.png",
     "static/media/AntColonyImage.png": "/website/static/media/AntColonyImage.b898033e1cc50f4d1c46.png",
     "static/media/L2.png": "/website/static/media/L2.ea4af46aae66363ef5e8.png",
@@ -52,12 +54,12 @@
     "static/media/Kaggle.svg": "/website/static/media/Kaggle.cfe8af0d589d533643e982dee012ca1d.svg",
     "static/media/dropdownDG.svg": "/website/static/media/dropdownDG.f92a1521bf417c15f4724e13af42b194.svg",
     "static/media/PyTorch.svg": "/website/static/media/PyTorch.091d29874e55ca1389ecf4a0eb434553.svg",
-    "main.a78828e6.css.map": "/website/static/css/main.a78828e6.css.map",
-    "main.aad0f74c.js.map": "/website/static/js/main.aad0f74c.js.map",
-    "453.bb828c5d.chunk.js.map": "/website/static/js/453.bb828c5d.chunk.js.map"
+    "main.426ba4b3.css.map": "/website/static/css/main.426ba4b3.css.map",
+    "main.ff7848bb.js.map": "/website/static/js/main.ff7848bb.js.map",
+    "453.b03e3c98.chunk.js.map": "/website/static/js/453.b03e3c98.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a78828e6.css",
-    "static/js/main.aad0f74c.js"
+    "static/css/main.426ba4b3.css",
+    "static/js/main.ff7848bb.js"
   ]
 }
