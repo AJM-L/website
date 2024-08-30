@@ -15,7 +15,7 @@ import kaggleIcon from "../../assets/TechIcons/Kaggle.svg"
 import projectData from "../../ProjectData"
 
 
-const FEATURED_LENGTH = 3
+const FEATURED_LENGTH = 5
 
 
 export default function FeaturedProjects() {
@@ -27,16 +27,14 @@ export default function FeaturedProjects() {
         <div>
             <h1 className="title">Featured Projects</h1>
             <div className="featuredProjectsContainer">
-
-            <ul>
             { FeaturedData.map((project) => {
                 return(
-                <li className="project" key={project.id}>
+                <div className="project" key={project.id}>
                     <a href={project.githubLink} className="FeaturedContainer">
-                        <h3 className="projectTitle">Playlist Cover Art Generator</h3>
+                        <h3 className="projectTitle">{project.title}</h3>
                         <img src={project.image} alt="Spotify Playlist Cover Image" className="FeaturedPhoto"></img>
-                        <div className="descriptionContainer">
-                        <p className="description"> &emsp; {project.shortDescription}</p>
+                        <div className="projectDescriptionContainer">
+                        <p className="description">{project.shortDescription}</p>
                         </div>
                         <div className="icons">
                         { project.techStack.map((tech) => (
@@ -44,10 +42,8 @@ export default function FeaturedProjects() {
                     ))}
                         </div>
                     </a>
-                </li>
-                
-                )})}
-                </ul>
+                </div>
+            )})}
             </div>
         </div>
     )

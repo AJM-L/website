@@ -14,7 +14,7 @@ export default function Projects() {
                 <a href={project.githubLink} className="projectLinkContainer">
                 <li className="projectContainer" key={project.id}>
                 
-                <div className="rightTwoThirds">
+                <container className="rightTwoThirds">
                     <div className="projectTitleContainer">
                         <h2 className="projectTitleMain">{ project.title }</h2>
                         <p className="projectDate">{project.date}</p>
@@ -27,10 +27,10 @@ export default function Projects() {
                     ))}
                     </ul>
                     
-                    </div>
-                <div className="leftThird">
+                    </container>
+                <container className="leftThird">
                     <img src={project.image} className="projectImage" alt="project image"/>
-                </div>
+                </container>
                 
             </li>
             </a>

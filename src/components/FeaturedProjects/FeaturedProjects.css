@@ -1,14 +1,16 @@
 @media screen and (min-width: 725px) {
     .project {
-        width:50%;
-        flex-direction: column;
+        width: 30%;
         display: flex;
-        margin:auto;
         margin-top: 10px;
+        height:600px;
+        
     }
     .featuredProjectsContainer {
         display: flex;
-        justify-content: center;
+        width:100%;
+        justify-content: space-evenly;
+        align-items: center;
         flex-wrap: wrap;
     }
     .projectTitle {
@@ -81,9 +83,13 @@
 
 .FeaturedContainer {
     width:80%;
+    height:600px;
+    display:flex;
+    flex-direction: column;
     margin: auto;
     text-decoration: none;
     color:white;
+    justify-content: space-evenly;
 }
 
 .FeaturedContainer:hover {
@@ -100,9 +106,8 @@
     color: goldenrod;
 }
 
-.descriptionContainer {
+.projectDescriptionContainer {
     display: flex;
-    height:100px;
     align-content: center;
     justify-content: center;
     flex-direction: column;
@@ -111,4 +116,5 @@
 
 .description {
     font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
 }

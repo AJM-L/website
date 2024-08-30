@@ -1,33 +1,27 @@
 @media screen and (min-width: 725px) {
-
-
 .projectContainer {
-    width:100%;
     display:flex;
     flex-direction: row-reverse;
     justify-content: center;
-    height:fit-content;
-    margin: 20px auto;
-
+    
 }
 
 .leftThird {
-    width:33%;
     display:flex;
     flex-direction: column;
+    width:300;
 
 }
 
 .rightTwoThirds {
-    width:66%;
     display:flex;
     flex-direction: column;
     gap:5px;
+    width:auto;
 }
 
 .projectTitleContainer {
     display: flex;
-    width:100%;
 }
 
 .projectTitleMain {
@@ -49,8 +43,6 @@
 @media screen and (max-width: 725px) {
     .projectTitleContainer {
         display: flex;
-        width:100%;
-        margin:10px auto;
     }
     .projectTitleMain {
         margin-left: 10px;
@@ -78,7 +70,7 @@
     }
 
     .rightTwoThirds {
-        margin: 20px auto;
+        margin: 20px 10px;
     }
 
 }
@@ -93,4 +85,26 @@
 .projectLinkContainer {
     text-decoration: none;
     color:white;
+}
+
+.projectTitleContainer {
+    background-color: rgb(90, 90, 90);
+    margin:10px 10px;
+    border-radius: 10px;
+    padding:2px;
+}
+
+.projectContainer {
+    margin: 20px 10px;
+    background-color: rgb(55, 55, 55);
+    border-radius: 10px;
+    padding:10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.projectDescription {
+    margin:10px 10px;
 }

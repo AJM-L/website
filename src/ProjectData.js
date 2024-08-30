@@ -7,6 +7,9 @@ import AntColonyImage from "./assets/Projects/AntColonySim/AntColonyImage.png"
 import MandelbrotImage from "./assets/Projects/Mandelbrot/test.png"
 import WireframeImage from "./assets/Projects/Wireframe/Wireframe.png"
 import TicTacToeImage from "./assets/Projects/BoardGames/TicTacToeImage.png"
+import PinterestImage from "./assets/Projects/PinterestScaper/PinterestHomepage.png"
+import FakePins from "./assets/Projects/PinterestDCGAN/FakePins.png"
+
 
 import Python from "./assets/TechIcons/Python.svg"
 import Jupyter from "./assets/TechIcons/Jupyter.svg"
@@ -19,6 +22,44 @@ import HTML5 from "./assets/TechIcons/HTML5.svg"
 
 
 const projectData = [
+    {
+        "id":"PersonalizedPinDCGAN",
+        "title":"Personalized Pinterest Pin DCGAN",
+        "githubLink":"https://github.com/AJM-L/Spotify-Playlist-Image-and-Name-Generator",
+        "date":"July, 2024",
+        "image":FakePins,
+        "shortDescription":"Custom pinterest pins using a Deep Convolutional Neural Network.",
+        "longDescripton":
+            [
+                {"id":"p11",
+                "para":"Combining my previous projects of a DCGAN and Pinterest web scraper, I created a set of synthetic images based on my own pinterest data. Given my computational restraints (I don't have millions of dollars for GPUs) my images are far from realistic. However, I am happy with the progress of my model."
+                },
+                {
+                    "id":"p12",
+                    "para":"I love that these images I produced have a mathematical relationship to my own preferences and choioces. Through my pinterest preferences, I created a dataset that could be used to train a GAN. Subsequently, these images contain information about my own preferences and existence."
+                }
+            ],
+        "techStack":[Python, PyTorch]
+    },
+    {
+        "id":"PinterestWebScraper",
+        "title":"Pinterest Web Scraper",
+        "githubLink":"https://github.com/AJM-L/Spotify-Playlist-Image-and-Name-Generator",
+        "date":"July, 2024",
+        "image":PinterestImage,
+        "shortDescription":"Python and Selenium program to download public pinterest pins.",
+        "longDescripton":
+            [
+                {"id":"p11",
+                "para":"For this project, I wrote a Python script that uses selenium to download pinned images from a given pinterest user. The script downloads every public image from the user sorting each board into folders."
+                },
+                {
+                    "id":"p12",
+                    "para":"Through this project, I learned about web scraping use cases, practices, and methods. I created file management systems and bypassed lazyloading while maintaining high content downlaod speed."
+                }
+            ],
+        "techStack":[Python]
+    },
     {
         "id":1,
         "title":"Spotify Cover Generator",
@@ -39,6 +80,25 @@ const projectData = [
         "techStack":[Python, Jupyter, Spotify, OpenAI]
     },
     {
+        "id":3,
+        "title":"Art Reccomendation App",
+        "githubLink":"https://github.com/AJM-L/painting-recommendation",
+        "date":"July, 2024",
+        "image":ArtReccomendationImage,
+        "shortDescription":"Implements image vectorization, cosine similarity, and an image classification CNN to reccomend art to users from an uploaded image.",
+        "longDescripton":[
+            {
+                "id":"p31",
+                "para":"I love painting and taking inspiration from other artists, but it can be difficult to find art with similar styles to my own. To help solve this problem, I created an art reccomendation app where I can upload a picture of a piece of art I made or like, and the app will show pieces similar to the one given and return an artist with a similar style."
+            },
+            {
+                "id":"p32",
+                "para":"The app is written in Python, using the Flask web framework. It includes a database of paintings from Kaggle and uses image vectorization and cosine similarity to serve similar images and a CNN image classifier to reccomend similar artists."
+            }
+        ],
+        "techStack": [Python, Flask, PyTorch, HTML5]
+    },
+    {
         "id":2,
         "title":"Fashion Product DCGAN",
         "githubLink":"https://github.com/AJM-L/DCGAN-Fashion-Product",
@@ -57,25 +117,6 @@ const projectData = [
             }
 ],
         "techStack": [Python, Jupyter, PyTorch, Kaggle]
-    },
-    {
-        "id":3,
-        "title":"Art Reccomendation App",
-        "githubLink":"https://github.com/AJM-L/painting-recommendation",
-        "date":"July, 2024",
-        "image":ArtReccomendationImage,
-        "shortDescription":"Implements image vectorization, cosine similarity, and an image classification CNN to reccomend art to users from an uploaded image.",
-        "longDescripton":[
-            {
-                "id":"p31",
-                "para":"I love painting and taking inspiration from other artists, but it can be difficult to find art with similar styles to my own. To help solve this problem, I created an art reccomendation app where I can upload a picture of a piece of art I made or like, and the app will show pieces similar to the one given and return an artist with a similar style."
-            },
-            {
-                "id":"p32",
-                "para":"The app is written in Python, using the Flask web framework. It includes a database of paintings from Kaggle and uses image vectorization and cosine similarity to serve similar images and a CNN image classifier to reccomend similar artists."
-            }
-        ],
-        "techStack": [Python, Flask, PyTorch, HTML5]
     },
     {
         "id":4,
@@ -138,7 +179,7 @@ const projectData = [
         "longDescripton":[
             {
                 "id":"p71",
-                "para":"These are the images I created using the logic of the Mandelbrot set. The Mandelbrot set is a set of numbers in the complex plane C that remain bounded upon iterative application of the mandelbrot function."
+                "para":"These are the images I created using the logic of the Mandelbrot set. The Mandelbrot set is a set of numbers in the complex plane C that remain bounded upon iterative application of the mandelbrot function. My script is able to render any discreet section of the mandelbrot set and supply the user with a jpg image file."
             }
         ],
         "techStack": [Python]
@@ -157,7 +198,7 @@ const projectData = [
             },
             {
                 "id":"p82",
-                "para":"I used this opportunity to visualize several graph search and optimization algorithms including Kosaraju's algorithm, BFS and DFS, and prims algorithm (see above)."
+                "para":"My program can display and rotate any 3-d graph and provides preset functions for displaying cubes, generating random graphs, and running various graph search and pruning algorithms. I used this opportunity to visualize several graph search and optimization algorithms including Kosaraju's algorithm, BFS and DFS, and prims algorithm (see image)."
             }
         ],
         "techStack": [Python]
