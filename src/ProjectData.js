@@ -25,7 +25,7 @@ const projectData = [
     {
         "id":"PersonalizedPinDCGAN",
         "title":"Personalized Pinterest Pin DCGAN",
-        "githubLink":"https://github.com/AJM-L/Spotify-Playlist-Image-and-Name-Generator",
+        "githubLink":"https://github.com/AJM-L/",
         "date":"July, 2024",
         "image":FakePins,
         "shortDescription":"Custom pinterest pins using a Deep Convolutional Neural Network.",
@@ -44,7 +44,7 @@ const projectData = [
     {
         "id":"PinterestWebScraper",
         "title":"Pinterest Web Scraper",
-        "githubLink":"https://github.com/AJM-L/Spotify-Playlist-Image-and-Name-Generator",
+        "githubLink":"https://github.com/AJM-L/PinterestScraper",
         "date":"July, 2024",
         "image":PinterestImage,
         "shortDescription":"Python and Selenium program to download public pinterest pins.",

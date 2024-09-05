@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./nav.css";
 import dropdown from "../../assets/dropdownDG.svg";
+import dropdownX from "../../assets/dropdownnXDG.svg"
 import contactIcon from "../../assets/contactimg.png";
 import useScroll from "./useScroll";
 
@@ -24,7 +25,11 @@ export default function Nav () {
       visibility: "visible",
       transition: "all 0.5s"
     },
-  }
+  };
+
+  function getImage (state) {
+    return state ? dropdownX : dropdown;
+  };
 
     return (
         <header className="navbar" style={scrollDirection != "up" ? styles.active: styles.hidden}   >
@@ -48,7 +53,7 @@ export default function Nav () {
               Contact
             </a>
             <div onClick={toggleNav} className={`navDropdownMenu ${openNav ? "open" : "closed"}`}>
-            <img src={dropdown} alt="drop down menu icon" className="navDropdownMenuIcon"></img>
+            <img src={getImage(openNav)} alt="drop down menu icon" className="navDropdownMenuIcon"></img>
             </div>
           </div>
         </header>

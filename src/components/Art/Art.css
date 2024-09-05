@@ -13,6 +13,7 @@
         margin-top:auto;
         display:flex;
         height:min-content;
+        flex-direction: column;
     }
     .artTitle {
         margin-bottom: 10px;
@@ -33,6 +34,7 @@
         margin-left:15px;
         margin-top:20px;
         display:flex;
+        flex-direction: column;
     }
 
     .artTitle {
