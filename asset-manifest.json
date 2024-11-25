@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.748350c7.css",
-    "main.js": "/website/static/js/main.6247f739.js",
+    "main.css": "/website/static/css/main.265ebcfa.css",
+    "main.js": "/website/static/js/main.2cf79557.js",
     "static/js/453.b03e3c98.chunk.js": "/website/static/js/453.b03e3c98.chunk.js",
     "static/media/Poster1.png": "/website/static/media/Poster1.f71ee06fcf290d7a42f8.png",
     "static/media/Lizzie'sPoster.png": "/website/static/media/Lizzie'sPoster.2e7d1b2db0e5bb3d4f47.png",
@@ -39,29 +39,36 @@
     "static/media/AnatomicalStudy.png": "/website/static/media/AnatomicalStudy.b2b645791010c729a236.png",
     "static/media/StillLife.png": "/website/static/media/StillLife.35f93aa4f2c7b7e29d7b.png",
     "static/media/Cathedral.png": "/website/static/media/Cathedral.8def0c00f55764328ff6.png",
+    "static/media/PDFReader.png": "/website/static/media/PDFReader.611f9124c94fd69a72f2.png",
     "static/media/vpython.png": "/website/static/media/vpython.0bbe0c274a5adbab0826.png",
     "static/media/StandingOnBusiness.png": "/website/static/media/StandingOnBusiness.48fdca0c63f1f6fa36f2.png",
     "static/media/TheRemovalOfTheMask.jpeg": "/website/static/media/TheRemovalOfTheMask.3d22991cbd273eb5f83b.jpeg",
     "static/media/MLPImg.png": "/website/static/media/MLPImg.6fc5d17106bd2e54ac28.png",
+    "static/media/PM.png": "/website/static/media/PM.6e1fcd2dc6226069c0ce.png",
     "static/media/TicTacToeImage.png": "/website/static/media/TicTacToeImage.0496b083fdb0ee157127.png",
+    "static/media/UX.png": "/website/static/media/UX.4512a22a330a42a43673.png",
     "static/media/github.png": "/website/static/media/github.b56edc948332bb842cac.png",
     "static/media/Flask.svg": "/website/static/media/Flask.c084b9349458e09e6559ca851f06e2b2.svg",
+    "static/media/React.svg": "/website/static/media/React.4e0c97009b885bfa75c5412262a46f5f.svg",
     "static/media/Python.svg": "/website/static/media/Python.849d0b2b5f1ec20f077dd267498bd536.svg",
     "static/media/openai-svgrepo-com.svg": "/website/static/media/openai-svgrepo-com.04ad457f0e1c677f769f0f8b0938e382.svg",
+    "static/media/Java.svg": "/website/static/media/Java.a751bad6c81431ab4dd6fa6632a65540.svg",
+    "static/media/Adobe Photoshop.svg": "/website/static/media/Adobe Photoshop.1274ffaf1f86a470be0a35d3558f4a01.svg",
     "static/media/Jupyter.svg": "/website/static/media/Jupyter.0482682905e698f6a88389cd0b57dc37.svg",
+    "static/media/JavaScript.svg": "/website/static/media/JavaScript.4c1b5332c1b1057928f6f06cf972c91c.svg",
     "static/media/Spotify.svg": "/website/static/media/Spotify.5017cf1664eff772b580a4defe313c47.svg",
+    "static/media/CSS3.svg": "/website/static/media/CSS3.39769a8bd378bf410d6b381a8d88fa35.svg",
     "index.html": "/website/index.html",
     "static/media/HTML5.svg": "/website/static/media/HTML5.8664168d5bc90b1a24396f85aadbf623.svg",
     "static/media/Kaggle.svg": "/website/static/media/Kaggle.cfe8af0d589d533643e982dee012ca1d.svg",
-    "static/media/dropdownnXDG.svg": "/website/static/media/dropdownnXDG.91208c117ad65dc68b330871461f6e1b.svg",
-    "static/media/dropdownDG.svg": "/website/static/media/dropdownDG.f92a1521bf417c15f4724e13af42b194.svg",
+    "static/media/Adobe Premiere Pro.svg": "/website/static/media/Adobe Premiere Pro.e5da4087b14474f6104cd92a91e12a9f.svg",
     "static/media/PyTorch.svg": "/website/static/media/PyTorch.091d29874e55ca1389ecf4a0eb434553.svg",
-    "main.748350c7.css.map": "/website/static/css/main.748350c7.css.map",
-    "main.6247f739.js.map": "/website/static/js/main.6247f739.js.map",
+    "main.265ebcfa.css.map": "/website/static/css/main.265ebcfa.css.map",
+    "main.2cf79557.js.map": "/website/static/js/main.2cf79557.js.map",
     "453.b03e3c98.chunk.js.map": "/website/static/js/453.b03e3c98.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.748350c7.css",
-    "static/js/main.6247f739.js"
+    "static/css/main.265ebcfa.css",
+    "static/js/main.2cf79557.js"
   ]
 }
