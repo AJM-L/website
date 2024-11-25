@@ -1,19 +1,15 @@
-hr.solid {
-    border-top: 3px solid rgb(30, 30, 30);
-    border-color: darkgray;
-  }
-
 .dividerContainer {
-    margin-top:30px;
-    margin-bottom:30px;
-    padding: 10px;
+    background-color: #111111;
+    padding: 0;
+    margin: 0;
 }
 
-.dividerTop {
-    height: 30px;
-}
-
-.dividerBottom {
-    height:30px;
+.divider {
+    border: none;
+    border-top: 2px solid #000000;
+    height: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
 }
   

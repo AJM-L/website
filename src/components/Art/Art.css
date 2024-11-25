@@ -2,10 +2,23 @@
     .artContainer {
         display:flex;
         flex-direction: row;
+        transition: transform 0.3s ease;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .artContainer:hover {
+        transform: translateY(-5px);
     }
     .image1 {
         width:48%;
         margin:0px 1%;
+        border-radius: 4px;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+    }
+    .image1:hover {
+        opacity: 0.9;
     }
     .descriptionContainer{
         margin-left:15px;
@@ -43,10 +56,91 @@
     }
 }
 
-.divider{
-    height:50px;
-}
-
 .mainTitle {
     margin:25px 0;
+}
+
+.art-section {
+  padding: 50px;
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: goldenrod;
+  margin-bottom: 30px;
+  font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.masonry-grid {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-rows: repeat(auto-fill, 300px);
+  grid-auto-columns: max-content;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.masonry-grid-item {
+  height: 300px;
+  min-width: 200px;
+  max-width: 600px;
+}
+
+.masonry-grid-item.wide {
+  grid-column: span 2;
+}
+
+.masonry-grid-item.ultra-wide {
+  grid-column: span 3;
+}
+
+.masonry-grid-item.tall {
+  grid-row: span 2;
+  height: 620px;
+}
+
+@media screen and (max-width: 725px) {
+  .masonry-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .masonry-grid-item,
+  .masonry-grid-item.wide,
+  .masonry-grid-item.ultra-wide {
+    grid-column: span 1;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 726px) and (max-width: 1199px) {
+  .masonry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .masonry-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.masonry-grid-item {
+  transition: transform 0.3s ease;
+}
+
+.masonry-grid-item:hover {
+  transform: translateY(-5px);
 }

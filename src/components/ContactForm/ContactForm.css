@@ -1,9 +1,10 @@
 .emailAddress {
-    color:lightgray;
+    color: lightgray;
 }
+
 .contactInfo {
-    color:lightgray;
-    margin: 10px 10px;
+    color: lightgray;
+    margin: 10px;
 }
 
 .heading {
@@ -16,6 +17,6 @@
     color: goldenrod;
 }
 
-.contactContainer{
-    height:100vh;
+.contactContainer {
+    height: 150px;
 }

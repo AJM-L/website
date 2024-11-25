@@ -6,28 +6,30 @@ import {
   Route,
   HashRouter,
 } from "react-router-dom";
-import Nav from "./components/Nav/Nav";
+import MainLayout from './layouts/MainLayout';
 import Home from "./pages/Home"
 import ProjectsPage from './pages/ProjectsPage';
 import ArtPage from "./pages/ArtPage"
 import Footer from "./components/Footer/Footer"
 import ContactPage from './pages/ContactPage';
+import NotFound from './pages/NotFound';
+import AboutPage from './pages/AboutPage';
 
 
 function App() {
   return (
-    <div>
-    <HashRouter basename={"/"}>
-      <Nav />
-      <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/Projects" element={<ProjectsPage />} />
-      <Route path="/Art" element={<ArtPage />} />
-      <Route path="/Contact" element={<ContactPage />} />
-      </Routes>
-      <Footer />
+    <HashRouter basename="/">
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/art" element={<ArtPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </MainLayout>
     </HashRouter>
-    </div>
   );
 }
 

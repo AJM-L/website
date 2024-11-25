@@ -1,0 +1,26 @@
+.navbar {
+  transition: transform 0.3s ease;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.2s ease;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .navbar .MuiToolbar-root {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .navbar .MuiTypography-root {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+}
