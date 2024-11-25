@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.265ebcfa.css",
-    "main.js": "/website/static/js/main.2cf79557.js",
+    "main.css": "/website/static/css/main.84146cfb.css",
+    "main.js": "/website/static/js/main.96ef43ea.js",
     "static/js/453.b03e3c98.chunk.js": "/website/static/js/453.b03e3c98.chunk.js",
     "static/media/Poster1.png": "/website/static/media/Poster1.f71ee06fcf290d7a42f8.png",
     "static/media/Lizzie'sPoster.png": "/website/static/media/Lizzie'sPoster.2e7d1b2db0e5bb3d4f47.png",
@@ -63,12 +63,12 @@
     "static/media/Kaggle.svg": "/website/static/media/Kaggle.cfe8af0d589d533643e982dee012ca1d.svg",
     "static/media/Adobe Premiere Pro.svg": "/website/static/media/Adobe Premiere Pro.e5da4087b14474f6104cd92a91e12a9f.svg",
     "static/media/PyTorch.svg": "/website/static/media/PyTorch.091d29874e55ca1389ecf4a0eb434553.svg",
-    "main.265ebcfa.css.map": "/website/static/css/main.265ebcfa.css.map",
-    "main.2cf79557.js.map": "/website/static/js/main.2cf79557.js.map",
+    "main.84146cfb.css.map": "/website/static/css/main.84146cfb.css.map",
+    "main.96ef43ea.js.map": "/website/static/js/main.96ef43ea.js.map",
     "453.b03e3c98.chunk.js.map": "/website/static/js/453.b03e3c98.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.265ebcfa.css",
-    "static/js/main.2cf79557.js"
+    "static/css/main.84146cfb.css",
+    "static/js/main.96ef43ea.js"
   ]
 }
