@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/website/static/css/main.d6747c66.css",
-    "main.js": "/website/static/js/main.2863d031.js",
+    "main.js": "/website/static/js/main.db334415.js",
     "static/js/453.b03e3c98.chunk.js": "/website/static/js/453.b03e3c98.chunk.js",
     "static/media/Poster1.png": "/website/static/media/Poster1.f71ee06fcf290d7a42f8.png",
     "static/media/Lizzie'sPoster.png": "/website/static/media/Lizzie'sPoster.2e7d1b2db0e5bb3d4f47.png",
@@ -22,6 +22,7 @@
     "static/media/Headshot.JPG": "/website/static/media/Headshot.95d7bc535122ffbfade0.JPG",
     "static/media/PinterestHomepage.png": "/website/static/media/PinterestHomepage.2c804359d4755d0640c7.png",
     "static/media/Screenshot 2024-07-25 at 2.46.08 PM.png": "/website/static/media/Screenshot 2024-07-25 at 2.46.08 PM.0aaf2b88b6dcdd176811.png",
+    "static/media/PDFReader.png": "/website/static/media/PDFReader.10935140dda107775343.png",
     "static/media/AntColonyImage.png": "/website/static/media/AntColonyImage.b898033e1cc50f4d1c46.png",
     "static/media/L2.png": "/website/static/media/L2.ea4af46aae66363ef5e8.png",
     "static/media/15EpochsSeed999 copy.png": "/website/static/media/15EpochsSeed999 copy.358070ecd7606654508e.png",
@@ -39,7 +40,6 @@
     "static/media/AnatomicalStudy.png": "/website/static/media/AnatomicalStudy.b2b645791010c729a236.png",
     "static/media/StillLife.png": "/website/static/media/StillLife.35f93aa4f2c7b7e29d7b.png",
     "static/media/Cathedral.png": "/website/static/media/Cathedral.8def0c00f55764328ff6.png",
-    "static/media/PDFReader.png": "/website/static/media/PDFReader.611f9124c94fd69a72f2.png",
     "static/media/vpython.png": "/website/static/media/vpython.0bbe0c274a5adbab0826.png",
     "static/media/StandingOnBusiness.png": "/website/static/media/StandingOnBusiness.48fdca0c63f1f6fa36f2.png",
     "static/media/TheRemovalOfTheMask.jpeg": "/website/static/media/TheRemovalOfTheMask.3d22991cbd273eb5f83b.jpeg",
@@ -64,11 +64,11 @@
     "static/media/Adobe Premiere Pro.svg": "/website/static/media/Adobe Premiere Pro.e5da4087b14474f6104cd92a91e12a9f.svg",
     "static/media/PyTorch.svg": "/website/static/media/PyTorch.091d29874e55ca1389ecf4a0eb434553.svg",
     "main.d6747c66.css.map": "/website/static/css/main.d6747c66.css.map",
-    "main.2863d031.js.map": "/website/static/js/main.2863d031.js.map",
+    "main.db334415.js.map": "/website/static/js/main.db334415.js.map",
     "453.b03e3c98.chunk.js.map": "/website/static/js/453.b03e3c98.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6747c66.css",
-    "static/js/main.2863d031.js"
+    "static/js/main.db334415.js"
   ]
 }
