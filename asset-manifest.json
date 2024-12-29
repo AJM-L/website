@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/website/static/css/main.d6747c66.css",
-    "main.js": "/website/static/js/main.db334415.js",
+    "main.js": "/website/static/js/main.2d6590bd.js",
     "static/js/453.b03e3c98.chunk.js": "/website/static/js/453.b03e3c98.chunk.js",
     "static/media/Poster1.png": "/website/static/media/Poster1.f71ee06fcf290d7a42f8.png",
     "static/media/Lizzie'sPoster.png": "/website/static/media/Lizzie'sPoster.2e7d1b2db0e5bb3d4f47.png",
@@ -40,6 +40,7 @@
     "static/media/AnatomicalStudy.png": "/website/static/media/AnatomicalStudy.b2b645791010c729a236.png",
     "static/media/StillLife.png": "/website/static/media/StillLife.35f93aa4f2c7b7e29d7b.png",
     "static/media/Cathedral.png": "/website/static/media/Cathedral.8def0c00f55764328ff6.png",
+    "static/media/InstructlabUI.png": "/website/static/media/InstructlabUI.663eee3b35d748ade763.png",
     "static/media/vpython.png": "/website/static/media/vpython.0bbe0c274a5adbab0826.png",
     "static/media/StandingOnBusiness.png": "/website/static/media/StandingOnBusiness.48fdca0c63f1f6fa36f2.png",
     "static/media/TheRemovalOfTheMask.jpeg": "/website/static/media/TheRemovalOfTheMask.3d22991cbd273eb5f83b.jpeg",
@@ -64,11 +65,11 @@
     "static/media/Adobe Premiere Pro.svg": "/website/static/media/Adobe Premiere Pro.e5da4087b14474f6104cd92a91e12a9f.svg",
     "static/media/PyTorch.svg": "/website/static/media/PyTorch.091d29874e55ca1389ecf4a0eb434553.svg",
     "main.d6747c66.css.map": "/website/static/css/main.d6747c66.css.map",
-    "main.db334415.js.map": "/website/static/js/main.db334415.js.map",
+    "main.2d6590bd.js.map": "/website/static/js/main.2d6590bd.js.map",
     "453.b03e3c98.chunk.js.map": "/website/static/js/453.b03e3c98.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6747c66.css",
-    "static/js/main.db334415.js"
+    "static/js/main.2d6590bd.js"
   ]
 }
