@@ -15,8 +15,8 @@ export default function useGridDimensions() {
 
       // Calculate number of columns based on screen width
       if (width < 725) {
-        columns = 1;
-        rowHeight = width * 0.8; // 80% of screen width on mobile
+        columns = 2;
+        rowHeight = width * 0.9; // 80% of screen width on mobile
       } else if (width < 1200) {
         columns = 2;
         rowHeight = (width * 0.9) / 2.5; // Adjust for 2 columns with gap

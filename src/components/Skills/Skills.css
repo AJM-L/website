@@ -1,13 +1,13 @@
 .skillsSection {
     padding: 50px;
-    background-color: #2c2c2c;
+    background-color: var(--color-background-alt);
     color: #f0f0f0;
     text-align: center;
 }
 
 .skillsTitle {
     font-size: 2.5rem;
-    color: goldenrod;
+    color: var(--color-goldenrod);
     margin-bottom: 30px;
 }
 

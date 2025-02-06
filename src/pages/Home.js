@@ -9,9 +9,13 @@ export default function Home() {
     return ( 
         <div>
             <Landing />
+            <FeaturedProjects />
             <About />
             <Divider />
-            <FeaturedProjects />
+            <Divider />
+            <Skills />
+            <Divider />
+            <Contact />
             <Divider />
             <Contact />
         </div>

@@ -13,7 +13,7 @@ export default function Projects() {
   // Process images to get dimensions
   useEffect(() => {
     Promise.all(
-      projectData.map(project => new Promise(resolve => {
+      projectData.map(project => new Promise((resolve) => {
         const img = new Image();
         img.src = project.image;
         img.onload = () => resolve({
@@ -21,6 +21,7 @@ export default function Projects() {
           width: img.width,
           height: img.height
         });
+        img.onerror = () => resolve(project); // Handle image load errors gracefully
       }))
     ).then(setProcessedProjects);
   }, []);
@@ -71,8 +72,13 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   className="project-image"
+                  loading="lazy" // Improve performance with lazy loading
                 />
-                <div className="project-overlay">
+                <div className="project-overlay"
+                style={{
+                  width: `${project.width}px`,
+                  height: '100%'
+                }}>
                   <h3 className="project-title">{project.title}</h3>
                 </div>
               </div>

@@ -155,8 +155,13 @@ export default function FeaturedProjects() {
                   className="project-image"
                   loading="lazy"
                 />
-                <div className="project-overlay">
-                  <h3 className="project-title">{project.title}</h3>
+                <div className="project-overlay"
+                style={{
+                  width: `${project.width}px`,
+                  height: '100%'
+                }}>
+                  <h3 className="project-title"
+                  >{project.title}</h3>
                 </div>
               </div>
             ))}

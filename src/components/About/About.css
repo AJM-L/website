@@ -37,8 +37,8 @@
 .aboutSection {
     min-height: 100vh;
     padding: 80px 20px;
-    background-color: #1e1e1e;
-    color: #f0f0f0;
+    background-color: var(--color-background);
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,10 +50,10 @@
 }
 .sectionTitle {
     font-size: 3rem;
-    color: goldenrod;
+    color: var(--color-goldenrod);
     margin-bottom: 40px;
     text-align: center;
-    font-family: '"Roboto","Helvetica","Arial",sans-serif';
+    font-family: 'Roboto','Helvetica','Arial',sans-serif;
 }
 
 .aboutContainer {
@@ -80,7 +80,7 @@
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid goldenrod;
+    border: 5px solid var(--color-goldenrod);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
 
@@ -88,8 +88,8 @@
 
 .profileImage:hover {
     transform: scale(1.05);
-    border: 5px solid #ffd700;
-    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+    border: 5px solid var(--color-dark-goldenrod);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
 
 }
 
@@ -103,7 +103,7 @@
 }
 
 .bioItem {
-    background-color: #2c2c2c;
+    background-color: var(--color-background-alt);
     width: 100%;
     margin: 10px 0;
     padding: 25px;
@@ -114,7 +114,7 @@
 }
 
 .bioItem:hover {
-    background-color: #3a3a3a;
+    background-color: var(--color-background-alt-light);
     transform: translateY(-5px);
 }
 
@@ -123,10 +123,15 @@
     height: 40px;
     margin-right: 15px;
     object-fit: contain;
+    filter: invert(.7);
+}
+
+.bioItem:hover .bioIcon {
+    filter: invert(1);
 }
 
 .bioItem h3 {
-    color: goldenrod;
+    color: var(--color-goldenrod);
     margin: 5px 0;
     font-size: 1.5rem;
 
@@ -147,8 +152,8 @@
 .personalDescriptionContainer h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #dddddd;
-    border-bottom: 3px solid #333;
+    color: var(--color-light-text);
+    border-bottom: 3px solid var(--color-background-alt);
     padding-bottom: 0.5rem;
 
 
@@ -158,18 +163,23 @@
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
-    color: #444;
+    color: var(--color-light-text);
     text-align: justify;
 }
 
 .personalDescriptionContainer p {
-    color: #dddddd;
+    color: var(--color-light-text);
 }
 
 .personalDescription a {
     color: #ffffff;
     font-weight: bold;
     text-decoration: none;
+}
+
+.highlight {
+    color: var(--color-white);
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -190,14 +200,14 @@
     width: 100%;
     max-width: 1000px;
     padding: 20px;
-    background-color: #2c2c2c;
+    background-color: var(--color-background-alt);
     border-radius: 10px;
     margin-bottom: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .skillsSection h2, .achievementsSection h2 {
-    color: goldenrod;
+    color: var(--color-goldenrod);
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
@@ -226,7 +236,7 @@
 }
 
 .skillsContainer li {
-    background-color: #3a3a3a;
+    background-color: var(--color-background-alt);
     padding: 10px 20px;
     border-radius: 20px;
     width: 60%;
@@ -235,7 +245,7 @@
 }
 
 .skillsContainer li:hover {
-    background-color: #4a4a4a;
+    background-color: var(--color-background-alt-light);
 }
 
 .achievementsList {
@@ -244,7 +254,7 @@
 }
 
 .achievementsList li {
-    background-color: #3a3a3a;
+    background-color: var(--color-background-alt);
     padding: 10px 20px;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -252,7 +262,7 @@
 }
 
 .achievementsList li:hover {
-    background-color: #4a4a4a;
+    background-color: var(--color-background-alt-light);
 }
 
 @media screen and (min-width: 768px) {
@@ -286,14 +296,14 @@
     width: 100%;
     max-width: 1000px;
     padding: 20px;
-    background-color: #2c2c2c;
+    background-color: var(--color-background);
     border-radius: 10px;
     margin-bottom: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .timelineSection h2 {
-    color: goldenrod;
+    color: var(--color-goldenrod);
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
@@ -310,7 +320,7 @@
     top: 0;
     width: 30px;
     height: 30px;
-    fill: goldenrod;
+    fill: var(--color-goldenrod);
 }
 
 .timelineItem {
@@ -319,31 +329,31 @@
 }
 
 .timelineContent {
-    background-color: #3a3a3a;
+    background-color: var(--color-background-alt);
     padding: 15px 20px;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .timelineContent:hover {
-    background-color: #4a4a4a;
+    background-color: var(--color-background-alt-light);
     transform: translateY(-3px);
 }
 
 .timelineContent h3 {
-    color: goldenrod;
+    color: var(--color-goldenrod);
     margin-bottom: 5px;
     font-size: 1.3rem;
 }
 
 .timelineContent p {
-    color: #dddddd;
+    color: var(--color-light-text);
     font-size: 1rem;
     text-align: justify;
 }
 
 .timelineContent a {
-    color: #dddddd;
+    color: var(--color-light-text);
     text-decoration: none;
 }
 
@@ -355,7 +365,7 @@
         top: 0;
         bottom: 0;
         width: 2px;
-        background-color: goldenrod;
+        background-color: var(--color-goldenrod);
     }
 
     .timelineIcon {

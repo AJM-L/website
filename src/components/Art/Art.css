@@ -61,17 +61,17 @@
 }
 
 .art-section {
-  padding: 50px;
-  background-color: #222222;
-  color: #ffffff;
+    padding: 50px;
+    background-color: var(--color-background);
+    color: var(--color-white);
 }
 
 .section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: goldenrod;
-  margin-bottom: 30px;
-  font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-goldenrod);
+    margin-bottom: 50px;
+    font-family: 'Roboto','Helvetica','Arial',sans-serif;
 }
 
 .art-grid {
@@ -143,4 +143,35 @@
 
 .masonry-grid-item:hover {
   transform: translateY(-5px);
+}
+
+/* Additional styles for art items */
+.art-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.art-item:hover .art-overlay {
+  opacity: 1;
+}
+
+.art-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.art-title {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  text-align: center;
 }

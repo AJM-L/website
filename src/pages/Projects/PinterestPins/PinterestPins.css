@@ -1,0 +1,102 @@
+.pinterest-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-description {
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.project-description h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.intro-section {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--color-light-text);
+}
+
+.methodology-section h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tech-badge {
+    font-size: 0.9rem;
+    background-color: var(--color-background-alt-light);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    color: var(--color-goldenrod);
+    font-weight: normal;
+}
+
+.technical-details {
+    margin: 1.5rem 0;
+}
+
+.details-toggle {
+    background: none;
+    border: 2px solid var(--color-dark-gray);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--color-light-text);
+    transition: all 0.3s ease;
+}
+
+.details-toggle:hover {
+    background: var(--color-background-alt-light);
+    border-color: var(--color-goldenrod);
+    color: var(--color-goldenrod);
+}
+
+.methodology-section p {
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    color: var(--color-light-text);
+}
+
+.gallery-section h2 {
+    margin: 30px 0 20px;
+    color: var(--color-text);
+}
+
+.masonry-grid {
+    display: flex;
+    width: 100%;
+    margin-left: -16px; /* Compensate for column gap */
+}
+
+.masonry-grid_column {
+    padding-left: 16px; /* Column gap */
+    background-clip: padding-box;
+}
+
+.image-item {
+    margin-bottom: 16px;
+    break-inside: avoid;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--color-background-alt-light);
+}
+
+.image-item img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    border-color: var(--color-goldenrod);
+} 

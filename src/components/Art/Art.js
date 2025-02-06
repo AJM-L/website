@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Art.css';
 import artData from '../../ArtData';
-import Modal from '../Modal/Modal';
+import ArtModal from '../ArtModal/ArtModal';
 import useRowLayout from '../../hooks/useRowLayout';
 import '../../styles/SharedGridStyles.css';
 
@@ -12,7 +12,7 @@ export default function Art() {
 
   useEffect(() => {
     Promise.all(
-      artData.map(art => new Promise(resolve => {
+      artData.map(art => new Promise((resolve, reject) => {
         const img = new Image();
         img.src = art.image1;
         img.onload = () => resolve({
@@ -21,8 +21,14 @@ export default function Art() {
           width: img.width,
           height: img.height
         });
+        img.onerror = () => reject(`Failed to load image: ${art.image1}`);
       }))
-    ).then(setProcessedArt);
+    )
+    .then(setProcessedArt)
+    .catch(error => {
+      console.error(error);
+      // Optionally, set an error state to inform the user
+    });
   }, []);
 
   const { rows, containerWidth } = useRowLayout(processedArt);
@@ -40,10 +46,7 @@ export default function Art() {
   return (
     <section className="art-section">
       <h1 className="section-title">Art</h1>
-      <div 
-        className="art-container"
-        style={{ width: `${containerWidth}px`, margin: '0 auto' }}
-      >
+      <div className="art-container dynamic-width">
         {rows.map((row, rowIndex) => (
           <div 
             key={rowIndex} 
@@ -65,7 +68,9 @@ export default function Art() {
                 onClick={() => openModal(art)}
                 role="button"
                 tabIndex={0}
-                onKeyPress={(e) => { if (e.key === 'Enter') openModal(art); }}
+                onKeyPress={(e) => { 
+                  if (e.key === 'Enter' || e.key === ' ') openModal(art); 
+                }}
               >
                 <img 
                   src={art.image}
@@ -81,7 +86,7 @@ export default function Art() {
           </div>
         ))}
       </div>
-      <Modal isOpen={isModalOpen} onClose={closeModal} project={selectedArt} />
+      <ArtModal isOpen={isModalOpen} onClose={closeModal} project={selectedArt} />
     </section>
   );
 }

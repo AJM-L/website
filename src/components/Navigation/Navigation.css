@@ -1,15 +1,21 @@
 .navbar {
+  background-color: var(--color-background);
   transition: transform 0.3s ease;
 }
 
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: var(--color-light-text);
   transition: opacity 0.2s ease;
 }
 
 .navbar a:hover {
   opacity: 0.8;
+}
+
+.navbar .MuiToolbar-root {
+  background-color: var(--color-background);
+  color: var(--color-light-text);
 }
 
 @media (max-width: 600px) {

@@ -1,12 +1,12 @@
 .testimonialsSection {
     padding: 50px;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     text-align: center;
 }
 
 .testimonialsTitle {
     font-size: 2.5rem;
-    color: goldenrod;
+    color: var(--color-goldenrod);
     margin-bottom: 30px;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .testimonial {
-    background-color: #f9f9f9;
+    background-color: var(--color-light-text);
     padding: 20px 30px;
     border-radius: 10px;
     width: 60%;
@@ -38,7 +38,7 @@
 
 .testimonialAuthor {
     font-weight: bold;
-    color: #555555;
+    color: var(--color-background-alt-light);
 }
 
 @media screen and (max-width: 725px) {

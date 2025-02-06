@@ -1,10 +1,12 @@
-div {
+body {
+  background-color: var(--color-background);
+  color: var(--color-white);
+}
+
+
+.container {
   overflow: hidden;
 }
 
-body {
-  background-color: rgb(30, 30, 30);
-  color: white;
-}
 
 

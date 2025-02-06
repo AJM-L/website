@@ -20,65 +20,126 @@ export default function Modal({ isOpen, onClose, project }) {
     // Handle focus trapping
     useEffect(() => {
         if (isOpen) {
-            const focusableElements = modalRef.current.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-            const firstElement = focusableElements[0];
-            const lastElement = focusableElements[focusableElements.length - 1];
+            const focusableElements = modalRef.current.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            if (focusableElements.length > 0) {
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
 
-            const handleTab = (e) => {
-                if (e.key === 'Tab') {
-                    if (e.shiftKey) { // Shift + Tab
-                        if (document.activeElement === firstElement) {
-                            e.preventDefault();
-                            lastElement.focus();
-                        }
-                    } else { // Tab
-                        if (document.activeElement === lastElement) {
-                            e.preventDefault();
-                            firstElement.focus();
+                const handleTab = (e) => {
+                    if (e.key === 'Tab') {
+                        if (e.shiftKey) { // Shift + Tab
+                            if (document.activeElement === firstElement) {
+                                e.preventDefault();
+                                lastElement.focus();
+                            }
+                        } else { // Tab
+                            if (document.activeElement === lastElement) {
+                                e.preventDefault();
+                                firstElement.focus();
+                            }
                         }
                     }
-                }
-            };
+                };
 
-            window.addEventListener('keydown', handleTab);
-            firstElement.focus();
+                window.addEventListener('keydown', handleTab);
+                firstElement.focus();
 
-            return () => {
-                window.removeEventListener('keydown', handleTab);
-            };
+                return () => {
+                    window.removeEventListener('keydown', handleTab);
+                };
+            }
         }
+    }, [isOpen]);
+
+    // Prevent body from scrolling when modal is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
     }, [isOpen]);
 
     if (!isOpen || !project) return null;
 
+    const {
+        title,
+        date,
+        shortDescription,
+        longDescription,
+        image,
+        techStack,
+        githubLink,
+        pageLink
+    } = project;
+
     return (
-        <div className="modal-overlay" onClick={onClose} aria-modal="true" role="dialog">
-            <div className="modal-content" onClick={(e) => e.stopPropagation()} ref={modalRef}>
-                <button className="modal-close" onClick={onClose} aria-label="Close Modal">&times;</button>
-                <h2 className="modal-title">{project.title}</h2>
-                <img src={project.image} alt={`${project.title} Screenshot`} className="modal-image" />
-                <p className="modal-short-description">{project.shortDescription}</p>
-                <div className="modal-long-description">
-                    {project.longDescripton.map((para) => (
-                        <p key={para.id}>{para.para}</p>
-                    ))}
+        <div
+            className="modal-overlay"
+            onClick={onClose}
+            aria-modal="true"
+            role="dialog"
+            aria-labelledby="modal-title"
+        >
+            <div
+                className="modal-content"
+                onClick={(e) => e.stopPropagation()}
+                tabIndex="-1"
+                ref={modalRef}
+            >
+                <button
+                    className="modal-close"
+                    onClick={onClose}
+                    aria-label="Close Modal"
+                >
+                    &times;
+                </button>
+                <div className="modal-image-container">
+                    <img src={image} alt={`${title} Screenshot`} className="modal-image" />
                 </div>
-                <div className="modal-tech-stack">
-                    {project.techStack.map((tech, index) => (
-                        <img 
-                            className="modal-tech-icon" 
-                            src={tech} 
-                            alt={`Technology ${index + 1}`} 
-                            key={index}
-                            loading="lazy"
-                        />
-                    ))}
+                <div className="modal-details">
+                    <h2 id="modal-title" className="modal-title">{title}</h2>
+                    {date && <p><strong>Date:</strong> {date}</p>}
+                    {shortDescription && <p><strong>Description:</strong> {shortDescription}</p>}
+                    {longDescription && (
+                        <div>
+                            {longDescription.map((para) => (
+                                <p key={para.id}>{para.para}</p>
+                            ))}
+                        </div>
+                    )}
                 </div>
-                {project.githubLink && (
-                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="modal-github-link">
+                {techStack && (
+                    <div className="modal-tech-stack">
+                        {techStack.map((tech, index) => (
+                            <img 
+                                className="modal-tech-icon" 
+                                src={tech} 
+                                alt={`Technology ${index + 1}`} 
+                                key={index}
+                                loading="lazy"
+                            />
+                        ))}
+                    </div>
+                )}
+                {pageLink && (
+                    <a href={pageLink} target="_blank" rel="noopener noreferrer" className="modal-github-link">
                         More info
                     </a>
-                )}
+                ) ||
+                githubLink && (
+                    <a href={githubLink} target="_blank" rel="noopener noreferrer" className="modal-github-link">
+                        More info
+                    </a>
+                ) 
+                }
+
             </div>
         </div>
     );

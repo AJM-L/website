@@ -52,11 +52,10 @@ export default function Landing() {
                     <h1 className="landingSiteTitle">AJ Matheson-Lieber</h1>
                     <p className="landingPersonalTitle">
                         <ScrambledText text="Software" delay={0} />, {' '}
-                        <ScrambledText text="Design" delay={500} /> {' '}
+                        <ScrambledText text="Design" delay={500} />, {' '}
                         <ScrambledText text="and" delay={750} /> {" "}
                         <ScrambledText text="Art" delay={1000} />
                     </p>
-                    <Link to="/about" className="ctaButton">Learn More</Link>
                 </div>
             </div>
         </section>

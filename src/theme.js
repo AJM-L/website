@@ -4,10 +4,17 @@ const theme = createTheme({
   palette: {
     mode: 'dark', // or 'dark'
     primary: {
-      main: '#1976d2',
+      main: '#1976d2', // Matches --color-primary
     },
     secondary: {
-      main: '#dc004e',
+      main: '#dc004e', // Matches --color-secondary
+    },
+    background: {
+      default: '#000000', // Matches --color-background
+    },
+    text: {
+      primary: '#f0f0f0', // Matches --color-text
+      secondary: '#dddddd', // Matches --color-light-text
     },
   },
   typography: {

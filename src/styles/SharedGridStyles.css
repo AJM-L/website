@@ -65,7 +65,7 @@
 /* Focus styles for accessibility */
 .project-item:focus,
 .art-item:focus {
-  outline: 2px solid goldenrod;
+  outline: 2px solid var(--color-goldenrod);
   outline-offset: 2px;
 }
 
@@ -88,17 +88,17 @@
 
 /* Section-specific styles */
 .featured-projects-section {
-  background-color: #333333;
+  background-color: var(--color-background);
 }
 
 .art-section {
-  background-color: #222222;
+  background-color: var(--color-background);
 }
 
 .section-title {
   text-align: center;
   font-size: 2.5rem;
-  color: goldenrod;
+  color: var(--color-goldenrod);
   margin-bottom: 30px;
   font-family: 'Verdana, Geneva, Tahoma, sans-serif';
 } 
