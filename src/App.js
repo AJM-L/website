@@ -13,7 +13,7 @@ import ContactPage from './pages/ContactPage';
 import NotFound from './pages/NotFound';
 import AboutPage from './pages/AboutPage';
 import PinterestPins from "./pages/Projects/PinterestPins/PinterestPins"
-
+import ResumePage from "./pages/ResumePage"
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/art" element={<ArtPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/resume" element={<ResumePage />} />
           <Route path="/projects/pinterestgan" element={<PinterestPins />}></Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

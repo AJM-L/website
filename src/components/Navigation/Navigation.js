@@ -48,6 +48,9 @@ export default function Navigation() {
         <Button color="inherit" component={Link} to="/art">
           Art
         </Button>
+        <Button color="inherit" component={Link} to="/resume">
+          Resume
+        </Button>
         <Button color="inherit" component={Link} to="/contact">
           Contact
         </Button>
