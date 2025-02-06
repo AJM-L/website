@@ -4,8 +4,6 @@ import educationIcon from "../../assets/icons/education.png"
 import locationIcon from "../../assets/icons/location.png"
 import interestsIcon from "../../assets/icons/interests.png"
 import profileImage from "../../assets/AJSteps.jpeg"
-import Skills from "../Skills/Skills"
-import Divider from "../Divider/Divider"
 
 export default function About() {
     return (
@@ -103,9 +101,6 @@ export default function About() {
                     />
                 ))}
             </motion.div>
-            {/*<div className="skillsContainer">
-                <Skills />
-            </div>*/}
         </section>
     );
 }
