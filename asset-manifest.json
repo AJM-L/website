@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.d529f9d7.css",
-    "main.js": "/website/static/js/main.5a26fc0f.js",
+    "main.css": "/website/static/css/main.36947a28.css",
+    "main.js": "/website/static/js/main.c8a89564.js",
     "static/js/453.b03e3c98.chunk.js": "/website/static/js/453.b03e3c98.chunk.js",
     "static/media/Poster1.png": "/website/static/media/Poster1.f71ee06fcf290d7a42f8.png",
     "static/media/Lizzie'sPoster.png": "/website/static/media/Lizzie'sPoster.2e7d1b2db0e5bb3d4f47.png",
@@ -46,9 +46,7 @@
     "static/media/resume.pdf": "/website/static/media/resume.37a926c4d2b4cfabd59d.pdf",
     "static/media/TheRemovalOfTheMask.jpeg": "/website/static/media/TheRemovalOfTheMask.3d22991cbd273eb5f83b.jpeg",
     "static/media/MLPImg.png": "/website/static/media/MLPImg.6fc5d17106bd2e54ac28.png",
-    "static/media/PM.png": "/website/static/media/PM.6e1fcd2dc6226069c0ce.png",
     "static/media/TicTacToeImage.png": "/website/static/media/TicTacToeImage.0496b083fdb0ee157127.png",
-    "static/media/UX.png": "/website/static/media/UX.4512a22a330a42a43673.png",
     "static/media/github.png": "/website/static/media/github.b56edc948332bb842cac.png",
     "static/media/synthetic_image_052.png": "/website/static/media/synthetic_image_052.d781fc76d5e3045624be.png",
     "static/media/synthetic_image_041.png": "/website/static/media/synthetic_image_041.e0fb88d3abeea9aa8a63.png",
@@ -69,23 +67,18 @@
     "static/media/React.svg": "/website/static/media/React.4e0c97009b885bfa75c5412262a46f5f.svg",
     "static/media/Python.svg": "/website/static/media/Python.849d0b2b5f1ec20f077dd267498bd536.svg",
     "static/media/openai-svgrepo-com.svg": "/website/static/media/openai-svgrepo-com.04ad457f0e1c677f769f0f8b0938e382.svg",
-    "static/media/Java.svg": "/website/static/media/Java.a751bad6c81431ab4dd6fa6632a65540.svg",
-    "static/media/Adobe Photoshop.svg": "/website/static/media/Adobe Photoshop.1274ffaf1f86a470be0a35d3558f4a01.svg",
     "static/media/Jupyter.svg": "/website/static/media/Jupyter.0482682905e698f6a88389cd0b57dc37.svg",
-    "static/media/JavaScript.svg": "/website/static/media/JavaScript.4c1b5332c1b1057928f6f06cf972c91c.svg",
     "static/media/Spotify.svg": "/website/static/media/Spotify.5017cf1664eff772b580a4defe313c47.svg",
-    "static/media/CSS3.svg": "/website/static/media/CSS3.39769a8bd378bf410d6b381a8d88fa35.svg",
     "index.html": "/website/index.html",
     "static/media/HTML5.svg": "/website/static/media/HTML5.8664168d5bc90b1a24396f85aadbf623.svg",
     "static/media/Kaggle.svg": "/website/static/media/Kaggle.cfe8af0d589d533643e982dee012ca1d.svg",
-    "static/media/Adobe Premiere Pro.svg": "/website/static/media/Adobe Premiere Pro.e5da4087b14474f6104cd92a91e12a9f.svg",
     "static/media/PyTorch.svg": "/website/static/media/PyTorch.091d29874e55ca1389ecf4a0eb434553.svg",
-    "main.d529f9d7.css.map": "/website/static/css/main.d529f9d7.css.map",
-    "main.5a26fc0f.js.map": "/website/static/js/main.5a26fc0f.js.map",
+    "main.36947a28.css.map": "/website/static/css/main.36947a28.css.map",
+    "main.c8a89564.js.map": "/website/static/js/main.c8a89564.js.map",
     "453.b03e3c98.chunk.js.map": "/website/static/js/453.b03e3c98.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d529f9d7.css",
-    "static/js/main.5a26fc0f.js"
+    "static/css/main.36947a28.css",
+    "static/js/main.c8a89564.js"
   ]
 }
