@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.36947a28.css",
-    "main.js": "/website/static/js/main.c8a89564.js",
+    "main.css": "/website/static/css/main.03f090db.css",
+    "main.js": "/website/static/js/main.1f6c7d57.js",
     "static/js/453.b03e3c98.chunk.js": "/website/static/js/453.b03e3c98.chunk.js",
     "static/media/Poster1.png": "/website/static/media/Poster1.f71ee06fcf290d7a42f8.png",
     "static/media/Lizzie'sPoster.png": "/website/static/media/Lizzie'sPoster.2e7d1b2db0e5bb3d4f47.png",
@@ -44,6 +44,7 @@
     "static/media/vpython.png": "/website/static/media/vpython.0bbe0c274a5adbab0826.png",
     "static/media/StandingOnBusiness.png": "/website/static/media/StandingOnBusiness.48fdca0c63f1f6fa36f2.png",
     "static/media/resume.pdf": "/website/static/media/resume.37a926c4d2b4cfabd59d.pdf",
+    "static/media/LiveBrary.png": "/website/static/media/LiveBrary.5b8c18866515e964b152.png",
     "static/media/TheRemovalOfTheMask.jpeg": "/website/static/media/TheRemovalOfTheMask.3d22991cbd273eb5f83b.jpeg",
     "static/media/MLPImg.png": "/website/static/media/MLPImg.6fc5d17106bd2e54ac28.png",
     "static/media/TicTacToeImage.png": "/website/static/media/TicTacToeImage.0496b083fdb0ee157127.png",
@@ -69,16 +70,17 @@
     "static/media/openai-svgrepo-com.svg": "/website/static/media/openai-svgrepo-com.04ad457f0e1c677f769f0f8b0938e382.svg",
     "static/media/Jupyter.svg": "/website/static/media/Jupyter.0482682905e698f6a88389cd0b57dc37.svg",
     "static/media/Spotify.svg": "/website/static/media/Spotify.5017cf1664eff772b580a4defe313c47.svg",
+    "static/media/Figma.svg": "/website/static/media/Figma.c5b427ce8d1841c3bb716bc765233830.svg",
     "index.html": "/website/index.html",
     "static/media/HTML5.svg": "/website/static/media/HTML5.8664168d5bc90b1a24396f85aadbf623.svg",
     "static/media/Kaggle.svg": "/website/static/media/Kaggle.cfe8af0d589d533643e982dee012ca1d.svg",
     "static/media/PyTorch.svg": "/website/static/media/PyTorch.091d29874e55ca1389ecf4a0eb434553.svg",
-    "main.36947a28.css.map": "/website/static/css/main.36947a28.css.map",
-    "main.c8a89564.js.map": "/website/static/js/main.c8a89564.js.map",
+    "main.03f090db.css.map": "/website/static/css/main.03f090db.css.map",
+    "main.1f6c7d57.js.map": "/website/static/js/main.1f6c7d57.js.map",
     "453.b03e3c98.chunk.js.map": "/website/static/js/453.b03e3c98.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.36947a28.css",
-    "static/js/main.c8a89564.js"
+    "static/css/main.03f090db.css",
+    "static/js/main.1f6c7d57.js"
   ]
 }
