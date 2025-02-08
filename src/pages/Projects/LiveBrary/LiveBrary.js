@@ -41,7 +41,7 @@ export default function LiveBrary() {
                         </ul>
                         <p>
                             We conducted in-person field research and interviews with seniors in <strong>Claremont, California</strong>, as well as interviews
-                            with younger students. These insights highlighted the necessity for <strong>community connection</strong>, as well as the importance of
+                            with younger students. These insights highlighted the necessity for <strong>community connection</strong>, as well as the importance of 
                             <strong>intuitive design</strong> to reduce frustration when using technology.
                         </p>
                         <p>
