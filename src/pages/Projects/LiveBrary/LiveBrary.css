@@ -1,0 +1,75 @@
+/* General container styles */
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: var(--color-text);
+}
+
+/* Header styles */
+.project-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+.project-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-goldenrod);
+}
+
+.project-header p {
+  font-size: 1.25rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Content Layout */
+.project-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-description h2,
+.project-prototype h2 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  color: var(--color-goldenrod);
+  border-bottom: 2px solid var(--color-background-alt-light);
+  padding-bottom: 0.5rem;
+}
+
+.project-description p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project-description ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style: disc;
+}
+
+.project-prototype {
+  margin-top: 2rem;
+}
+
+/* Responsive / Desktop views */
+@media (min-width: 768px) {
+  .project-content {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+  .project-description {
+    width: 65%;
+  }
+  
+  .project-prototype {
+    width: 40%;
+    position: sticky;
+    top: 1rem;
+    align-self: flex-start;
+  }
+}

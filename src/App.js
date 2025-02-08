@@ -14,6 +14,7 @@ import NotFound from './pages/NotFound';
 import AboutPage from './pages/AboutPage';
 import PinterestPins from "./pages/Projects/PinterestPins/PinterestPins"
 import ResumePage from "./pages/ResumePage"
+import LiveBrary from "./pages/Projects/LiveBrary/LiveBrary"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/projects/pinterestgan" element={<PinterestPins />}></Route>
+          <Route path="/projects/livebrary" element={<LiveBrary />}></Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </MainLayout>

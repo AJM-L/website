@@ -11,6 +11,7 @@ import PinterestImage from "./assets/Projects/PinterestScaper/PinterestHomepage.
 import FakePins from "./assets/Projects/PinterestDCGAN/FakePins.png"
 import PDfReader from "./assets/Projects/PdfReader/PDFReader.png"
 import IBMImage from "./assets/Projects/InstructlabUI/InstructlabUI.png"
+import LiveBraryImage from "./assets/Projects/LiveBrary/LiveBrary.png"
 
 
 import Python from "./assets/TechIcons/Python.svg"
@@ -22,7 +23,7 @@ import Kaggle from "./assets/TechIcons/Kaggle.svg"
 import Flask from "./assets/TechIcons/Flask.svg"
 import HTML5 from "./assets/TechIcons/HTML5.svg"
 import ReactIcon from "./assets/TechIcons/React.svg"
-
+import Figma from "./assets/TechIcons/Figma.svg"
 
 // Helper function to create a project entry
 const createProject = ({
@@ -70,6 +71,21 @@ createProject({
 */
 
 const projectData = [
+    createProject({
+        id: "LiveBrary",
+        title: "LiveBrary",
+        pageLink: "#/projects/livebrary",
+        date: "February 2025",
+        image: LiveBraryImage,
+        shortDescription: "LiveBrary is an app that allows elderly people to share their experiences and connect with others. I worked with a team of 4 to design this app for Rice Design-a-thon 2025.",
+        longDescripton: createDescription([
+            "Livebrary is a live-streaming platform designed to bridge the generational gap by empowering seniors to share their skills, stories, and passions with a global audience. ",
+            "As technology increasingly isolates older populations from meaningful interactions, Livebrary provides a space where seniors can teach recipes, demonstrate crafts, offer wisdom, and engage in real-time conversations, ensuring their legacy is preserved and appreciated. ",
+            "Through extensive research, including interviews with seniors and younger individuals, secondary research from online forums, and scientific studies on loneliness, the project identified key needs such as community, recognition, and accessibility. The platform’s design prioritizes ease of use, featuring intuitive navigation and live video capabilities to foster genuine connections. ",
+            "By addressing the barriers that traditional social media platforms present for seniors, Livebrary creates an inclusive digital space where experience meets curiosity, ensuring that valuable stories and knowledge are never lost to time.",
+        ]),
+        techStack: [Figma]
+    }),
     createProject({
         id: "IBMProject",
         title: "UI/UX for IBM",

@@ -1,0 +1,39 @@
+Think of the last time you took time to learn a new skill from your grandpa or sat down to let your great-uncle tell you a story from his younger years?
+
+When will these stories be lost to time forever?
+
+As technology becomes more integrated into daily interactions, aging populations are having an increasingly harder time connecting with their families, sharing their passions, and finding community. Their legacy matters, but who will give them the time of day to preserve it?
+
+Livebrary recreates those precious moments with your older loved ones. A live-streaming platform designed for seniors to share their skills, crafts, recipes, life stories, these seniors get to share their passions with a global intergenerational audience. Whether it’s teaching a favorite recipe, demonstrating a handmade craft, sharing financial wisdom, or simply telling a great story, Livebrary turns years of wisdom into a library of meaningful, real-time interactions.
+
+Describe your research process and findings. If you conducted any surveys or interviews, please include the survey form and/or interview questions here. If you conducted secondary research by pulling from online sources, please include a link to your sources. (Max 500 words)
+Through our primary and secondary research, we distilled seniors’ needs into the following themes:
+
+Community
+Continued hobbies
+Respect & feeling seen
+Patience
+Relief of caretaker guilt
+To be remembered
+Read on to learn about how we came to these conclusions!
+
+Even though the senior user group is less accessible to a college campus, we believe that primary research is the most valuable way to understand the genuine pulse of a user group. We focused our efforts on conducting field research and in-person interviews with seniors (aged ~60+) located in Claremont, California. 5 seniors were willing to chat with us, where we also conducted prototype walkthroughs and testing with interactive low-fidelity drafts, both observing their uninterrupted browsing experience and asking for feedback on the usability of the overall application link to interview video excerpts here. Their openness to share their stories with us – and interest in sharing with the online community – reaffirmed that their continued hobbies have helped them maintain community with loved ones.
+
+We also conducted field research with younger students, asking questions such as, “Where and how do your older relatives thrive? Where and how are they struggling/bored/uncared for? Where and how do your grandparents find things to do? How do you build meaningful connections to your family and grandparents?” Through these interviews with students who are hundreds of miles away from their family members, one sentiment rang true throughout them all: “I don’t see or talk to my grandparents as much as I want to.”
+
+We also conducted secondary research on forums such as Quora and Reddit communities like r/Aging, whose users often share their difficulties with staying connected as they grow older. They describe feeling invisible, even when they’re trying to meet new people. “COMPANY is what I crave. The cats refuse to have coffee with me, nor do they ever ask me about my day, what I’m reading or make plans to go somewhere. I can’t discuss thoughts I had that day. I have a parrot who can speak but he never hugs me when I’m sad or celebrates if I overcome a hurdle.”
+
+Lastly, we turned to scientific studies to understand the statistics behind loneliness in seniors. According to the National Poll on Healthy Aging conducted by the University of Michigan, in 2023, one in three adults aged 50–80 (34%) reported feeling isolated from others in the past year. More than one in three older adults (37%) reported feeling a lack of companionship, and one in three older adults (33%) reported infrequent contact (once a week or less) with people from outside their home in 2023. We can see that there is a serious concern for loneliness spreading throughout the older generations.
+
+Describe your most important design decisions. What research findings and/or user testing results led you to make these decisions? (Max 500 words)
+While older “content creators” do exist on social media platforms like Youtube, Tiktok, and Facebook, the apps themselves are naturally advertised and catered towards younger populations and effectively push out older populations from both consuming and creating content on these platforms. Rather than pushing seniors towards existing technology, how can we harness their inherent humanity that comes with their years of wisdom? How can we create an accessible, senior-friendly platform that encourages this humanity, and doesn’t create an exclusionary community for these seniors?
+
+In answering this question, we found that creating an application for older users comes with unique challenges of accessibility and ease of use/navigability. We wanted to balance the complexity of each senior’s experience, while also having an extremely simple interface to eliminate cognitive overload.
+
+Live streaming and video
+We wanted to let the seniors share their experiences themselves rather than just feeding it to viewers, leading to our decision about a live streaming and video format. This way, it replicates the feeling of face to face interaction while also providing the senior a feeling of connection, expression, and visibility. All of the seniors and students we spoke to expressed their preference for video calling to feel connected, so we wanted to harness the feeling of live interaction by focusing the app’s functions on providing live and pre recorded video + skill sharing.
+
+Accessible design
+Through our discussions with seniors and secondary research about technologies used by older populations, it was clear that accessibility would be a big defining factor of this application. We focused on creating intuitive and assisted navigations while following WCAG guidelines closely. For example, our video streaming setup is accompanied by a comprehensive tutorial, completely walking through the setup process and making sure the senior is in the perfect condition to begin streaming without relying on their previous knowledge of videotaping or similar technologies.
+
+During our prototype testing with the 5 seniors, we made sure to A/B test specific features that might be confusing to older populations, such as toggling between a “sharing” or a “learning” use case. Ultimately, 100% of our users expressed that having two buttons displaying the options and greying out the current one would be much more understandable than other options we had been considering.
