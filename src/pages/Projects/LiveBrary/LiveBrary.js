@@ -36,7 +36,6 @@ export default function LiveBrary() {
                             <li><strong>Continued hobbies</strong></li>
                             <li><strong>Respect</strong> &amp; <strong>feeling seen</strong></li>
                             <li><strong>Patience</strong></li>
-                            <li><strong>Relief of caretaker guilt</strong></li>
                             <li><strong>To be remembered</strong></li>
                         </ul>
                         <p>
