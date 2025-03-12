@@ -51,7 +51,6 @@
     }
 
     .artTitle {
-        margin-bottom: 10px;
         display:flex;
     }
 }
@@ -60,18 +59,23 @@
     margin:25px 0;
 }
 
+/* Art Section Styles */
 .art-section {
-    padding: 50px;
-    background-color: var(--color-background);
-    color: var(--color-white);
+  padding: 60px 20px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--color-goldenrod);
-    margin-bottom: 50px;
-    font-family: 'Roboto','Helvetica','Arial',sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-goldenrod);
+  margin-bottom: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .art-grid {
@@ -145,33 +149,65 @@
   transform: translateY(-5px);
 }
 
-/* Additional styles for art items */
-.art-item {
-  position: relative;
-  cursor: pointer;
+/* Art Item Styles */
+
+.art-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.art-image-container {
   overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--color-background-alt);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.art-item:hover .art-overlay {
-  opacity: 1;
-}
-
-.art-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.art-image {
   width: 100%;
   height: 100%;
-  background-color: rgba(34, 34, 34, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-radius: 0;
 }
 
-.art-title {
-  color: var(--color-white);
-  font-size: 1.2rem;
-  text-align: center;
+.art-item:hover .art-image {
+  transform: scale(1.05);
+}
+
+
+/* Ensure proper spacing between art items */
+.art-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px !important;
+}
+
+/* Focus styles for accessibility */
+.art-item:focus {
+  outline: 2px solid var(--color-goldenrod);
+  outline-offset: 2px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 725px) {
+  .art-section {
+    padding: 40px 15px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .art-title {
+    font-size: 1rem;
+    min-height: 2.2rem;
+  }
+  
+  .art-date,
+  .art-medium,
+  .art-dimensions {
+    font-size: 0.8rem;
+  }
 }

@@ -1,102 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
 .pinterest-container {
-    padding: 20px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    padding: 60px 40px;
+    background-color: var(--color-background);
+    min-height: 100vh;
 }
 
 .project-description {
-    margin-bottom: 40px;
-    line-height: 1.6;
+    margin-bottom: 60px;
 }
 
 .project-description h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--color-text);
+    font-size: 128px;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 30px;
 }
 
 .intro-section {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: var(--color-light-text);
+    margin-bottom: 40px;
+}
+
+.intro-section p {
+    font-size: 24px;
+    color: #B8B8B8;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    max-width: 800px;
 }
 
 .methodology-section h3 {
-    font-size: 1.4rem;
-    margin: 1.5rem 0 1rem;
-    color: var(--color-text);
+    font-size: 36px;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    gap: 1rem;
-}
-
-.tech-badge {
-    font-size: 0.9rem;
-    background-color: var(--color-background-alt-light);
-    padding: 0.3rem 0.8rem;
-    border-radius: 1rem;
-    color: var(--color-goldenrod);
-    font-weight: normal;
-}
-
-.technical-details {
-    margin: 1.5rem 0;
-}
-
-.details-toggle {
-    background: none;
-    border: 2px solid var(--color-dark-gray);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    color: var(--color-light-text);
-    transition: all 0.3s ease;
-}
-
-.details-toggle:hover {
-    background: var(--color-background-alt-light);
-    border-color: var(--color-goldenrod);
-    color: var(--color-goldenrod);
+    gap: 15px;
 }
 
 .methodology-section p {
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-    color: var(--color-light-text);
+    font-size: 18px;
+    color: #B8B8B8;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 800px;
+}
+
+.tech-badge {
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFF;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.details-toggle {
+    background-color: transparent;
+    border: 2px solid #FFF;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.details-toggle:hover {
+    background-color: #FFF;
+    color: var(--color-background);
+}
+
+.technical-details p {
+    font-size: 16px;
+    color: #B8B8B8;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 3px solid #FFF;
 }
 
 .gallery-section h2 {
-    margin: 30px 0 20px;
-    color: var(--color-text);
+    font-size: 48px;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
 .masonry-grid {
     display: flex;
     width: 100%;
-    margin-left: -16px; /* Compensate for column gap */
+    margin-left: -20px; /* Adjust for the gap */
 }
 
 .masonry-grid_column {
-    padding-left: 16px; /* Column gap */
+    padding-left: 20px; /* Gap size */
     background-clip: padding-box;
 }
 
 .image-item {
-    margin-bottom: 16px;
-    break-inside: avoid;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-item:hover {
+    transform: scale(1.02);
 }
 
 .image-item img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    border: 1px solid var(--color-background-alt-light);
+    display: block;
+    border-radius: 10px;
 }
 
-.image-item img:hover {
-    transform: scale(1.02);
-    cursor: pointer;
-    border-color: var(--color-goldenrod);
+@media (max-width: 1023px) {
+    .project-description h1 {
+        font-size: 72px;
+    }
+    
+    .intro-section p {
+        font-size: 20px;
+    }
+    
+    .methodology-section h3 {
+        font-size: 28px;
+    }
+    
+    .gallery-section h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pinterest-container {
+        padding: 40px 20px;
+    }
+    
+    .project-description h1 {
+        font-size: 48px;
+    }
+    
+    .intro-section p {
+        font-size: 18px;
+    }
+    
+    .methodology-section h3 {
+        font-size: 24px;
+    }
+    
+    .methodology-section p {
+        font-size: 16px;
+    }
+    
+    .gallery-section h2 {
+        font-size: 28px;
+    }
 } 

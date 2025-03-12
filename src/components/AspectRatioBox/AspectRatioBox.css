@@ -1,23 +1,21 @@
 .aspect-ratio-box {
   position: relative;
   width: 100%;
-  height: 0;
   cursor: pointer;
-  border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
   background: var(--color-background-alt);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .aspect-ratio-box-inside {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
 
 .responsive-image {
@@ -28,26 +26,25 @@
   transition: transform 0.5s ease;
 }
 
+/* Hide the overlay */
 .image-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  padding: 20px;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-}
-
-.aspect-ratio-box:hover .image-overlay {
-  transform: translateY(0);
+  display: none;
 }
 
 .image-title {
-  color: var(--color-white);
-  margin: 0;
+  color: var(--color-goldenrod);
+  margin: 10px 0 0 0;
   font-size: 1.2rem;
-  text-align: center;
+  width: 100%;
+  padding: 0 5px;
+  font-family: Inter, sans-serif;
+  text-align: start;
+  font-weight: 600;
+  font-size: 16px;
+  /* Ensure text doesn't overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .aspect-ratio-box:focus {
@@ -57,4 +54,15 @@
 
 .aspect-ratio-box:hover .responsive-image {
   transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 725px) {
+  .aspect-ratio-box-inside {
+    height: auto !important;
+  }
+  
+  .responsive-image {
+    aspect-ratio: 16/9;
+  }
 } 

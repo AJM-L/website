@@ -15,7 +15,6 @@
   
   .art-modal-content {
     background-color: var(--color-background-alt);
-    border-radius: 8px;
     max-width: 90%;
     width: 800px;
     max-height: 90vh;
@@ -75,7 +74,7 @@
     font-size: 2rem;
     color: var(--color-goldenrod);
     text-align: center;
-    font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+    font-family: 'Inter', sans-serif;
   }
   
   .modal-details p {
@@ -83,6 +82,7 @@
     font-size: 1.1rem;
     color: var(--color-light-text);
     line-height: 1.6;
+    font-family: 'Inter', sans-serif;
   }
   
   .modal-details strong {
@@ -101,12 +101,12 @@
   }
   
   .art-modal-content::-webkit-scrollbar-thumb {
-    background: var(--color-goldenrod);
+    background: darkgray;
     border-radius: 4px;
   }
   
   .art-modal-content::-webkit-scrollbar-thumb:hover {
-    background: var(--color-goldenrod);
+    background: darkgray;
   }
   
   @keyframes fadeIn {

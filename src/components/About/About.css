@@ -1,19 +1,71 @@
-@media screen and (min-width: 768px) {
-    .aboutContainer {
-        height: 600px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .aboutSection {
-        padding: 100px 50px;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 50px;
-        align-items: center;
-        justify-content: center;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
 
+.TopSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background);
+}
+
+.sectionTitle {
+    display: flex;  
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 40px 8px 0px 40px;
+}
+
+.bioContent {
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.bioContent h3 {
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0px 0px 0px 0px;
+}
+.bioContent p {
+    color: #B8B8B8;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px 0px 0px 0px;
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.bioItem {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0px 0px 16px 40px;
+}
+@media screen and (min-width: 768px) {
     .profileSection {
         position: sticky;
         top: 100px;
@@ -28,42 +80,10 @@
 
     }
 
-    .bioHighlights {
-        margin: 0;
-    }
-
-}
-
-.aboutSection {
-    min-height: 100vh;
-    padding: 80px 20px;
-    background-color: var(--color-background);
-    color: var(--color-text);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
 }
 .skillsContainer {
     margin-top: 50px;
     width: 100%;
-}
-.sectionTitle {
-    font-size: 3rem;
-    color: var(--color-goldenrod);
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: 'Roboto','Helvetica','Arial',sans-serif;
-}
-
-.aboutContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 50px;
 }
 
 .profileImageContainer {
@@ -91,56 +111,6 @@
     border: 5px solid var(--color-dark-goldenrod);
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
 
-}
-
-.bioHighlights {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 1000px;
-}
-
-.bioItem {
-    background-color: var(--color-background-alt);
-    width: 100%;
-    margin: 10px 0;
-    padding: 25px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.bioItem:hover {
-    background-color: var(--color-background-alt-light);
-    transform: translateY(-5px);
-}
-
-.bioIcon {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-    object-fit: contain;
-    filter: invert(.7);
-}
-
-.bioItem:hover .bioIcon {
-    filter: invert(1);
-}
-
-.bioItem h3 {
-    color: var(--color-goldenrod);
-    margin: 5px 0;
-    font-size: 1.5rem;
-
-}
-
-.bioItem p {
-    margin: 2px 0;
-    color: #dddddd;
-    font-size: 1rem;
 }
 
 .personalDescriptionContainer {
@@ -266,11 +236,6 @@
 }
 
 @media screen and (min-width: 768px) {
-    .aboutContainer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
 
     .profileImageContainer {
         flex: 1;

@@ -4,11 +4,11 @@
     --color-secondary: #dc004e;
 
     /* Common Colors */
-    --color-background: #000000;
+    --color-background: #090a0a;
     --color-background-alt: #111111;
     --color-background-alt-light: #222222;
     --color-text: #f0f0f0;
-    --color-goldenrod: #f4c9b8;
+    --color-goldenrod: #ffff;
     --color-white: #ffffff;
     --color-light-text: #dddddd;
     --color-placeholder: #aaaaaa;
@@ -16,15 +16,17 @@
     --color-almost-black: #111111;
     --color-darkorange: darkorange;
     --color-dark-goldenrod: #ffddd9;
+    
+    /* Override MUI Paper shadow variables */
+    --Paper-shadow: none !important;
+    --Paper-overlay: none !important;
 }
 
 body {
     background-color: var(--color-background);
     color: var(--color-text);
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -32,4 +34,12 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
+}
+
+/* Global MUI overrides */
+.MuiPaper-root.MuiAppBar-root {
+    box-shadow: none !important;
+    --Paper-shadow: none !important;
+    --Paper-overlay: none !important;
+    background-image: none !important;
 }

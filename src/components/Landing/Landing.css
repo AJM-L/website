@@ -1,71 +1,95 @@
-.landingSection {
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.AJ {
+    width: 35%;
+    height: 39vw;
+    flex-shrink: 0;
+    color: #FFF;
+    font-size: 30vw;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 700;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: visible;
     position: relative;
+    padding-bottom: 1vw;
+    margin: 0;
+    bottom: 0;
+}
+
+.lastName {
     width: 100%;
-    height: 100vh;
+    height: 15vw;
+    flex-shrink: 0;
+    text-align: left;
+    color: #FFF;
+    font-size: 8vw;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 800;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: visible;
+    position: relative;
+    padding-bottom: 1vw;
+    margin: 0;
+}
+
+.professionalTitles {
+    color: #FFF;
+    font-family: Kanit;
+    font-size: 2vw;
+    height: 6vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    top: -2vw;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0.5vw;
+}
+
+.heroSection {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    height: 50vh;
+    width: 100vw;
     overflow: hidden;
 }
 
-.heroImage {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-overlay);
+.profileInfo {
+    width: 65%;
+    height: 31vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--color-white);
-    text-align: center;
+    justify-content: end;
 }
 
-.landingSiteTitle {
-    font-size: 3rem;
-    margin: 20px 0;
-    color: var(--color-white);
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 1vw;
+    padding-left: 1vw;
+    margin: 0 0;
 }
 
-.landingPersonalTitle {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    color: var(--color-light-text);
+.academicCredentials {
+    padding: 0vw;
+    margin: 0 0;
 }
 
-.landingHeadshot {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid var(--color-white);
-    object-fit: cover;
-    margin-bottom: 20px;
-    transition: transform 0.5s ease;
+.institution {
+    padding: 0vw;
+    margin: 0 0;
 }
 
-.landingHeadshot:hover {
-    transform: scale(1.05);
-}
-
-.ctaButton {
-    padding: 10px 20px;
-    background-color: var(--color-goldenrod);
-    color: var(--color-white);
-    border: none;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.ctaButton:hover {
-    background-color: var(--color-dark-goldenrod);
+.container {
+    height: 107vh;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

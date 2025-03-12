@@ -45,7 +45,6 @@ export default function Art() {
 
   return (
     <section className="art-section">
-      <h1 className="section-title">Art</h1>
       <div className="art-container dynamic-width">
         {rows.map((row, rowIndex) => (
           <div 
@@ -54,7 +53,7 @@ export default function Art() {
             style={{ 
               height: `${row.height}px`,
               gap: '20px',
-              marginBottom: '20px'
+              marginBottom: '100px'
             }}
           >
             {row.images.map((art) => (
@@ -72,14 +71,17 @@ export default function Art() {
                   if (e.key === 'Enter' || e.key === ' ') openModal(art); 
                 }}
               >
-                <img 
-                  src={art.image}
-                  alt={art.title}
-                  className="art-image"
-                  loading="lazy"
-                />
-                <div className="art-overlay">
-                  <h3 className="art-title">{art.title}</h3>
+                <div className="art-image-container" style={{ height: '100%', width: '100%' }}>
+                  <img 
+                    src={art.image}
+                    alt={art.title}
+                    className="art-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="item-info-container">
+                  <h3 className="art-title">{art.title ? art.title : 'Untitled'}</h3>
+                  {art.date && <span className="art-date">{art.date}</span>}
                 </div>
               </div>
             ))}

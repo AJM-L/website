@@ -8,58 +8,46 @@ import profileImage from "../../assets/AJSteps.jpeg"
 export default function About() {
     return (
         <section className="aboutSection">
-            <motion.h1 
-                className="sectionTitle"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-            >
-                About Me
-            </motion.h1>
-            
-            <div className="aboutContainer">
+            <div className="TopSection">
+                <motion.h1 
+                    className="sectionTitle"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    About Me
+                </motion.h1>
+                
+                <div className="aboutContainer">
+
                     <motion.div 
-                    className="profileImageContainer"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                >
-                    <img src={profileImage} alt="Profile" className="profileImage" />
-                </motion.div>
-
-                <motion.div 
-                    className="bioHighlights"
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                >
-                    <div className="bioItem">
-                        <img src={educationIcon} alt="Education" className="bioIcon" />
-                        <div className="bioContent">
-                            <h3>Education</h3>
-                            <p>Claremont McKenna College</p>
-                            <p>Mathematics, Philosophy, & Computer Science</p>
+                        className="bioHighlights"
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                    >
+                        <div className="bioItem">
+                            <div className="bioContent">
+                                <h3>Studying</h3>
+                                <p>Mathematics, Philosophy, & Computer Science</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="bioItem">
-                        <img src={locationIcon} alt="Location" className="bioIcon" />
-                        <div className="bioContent">
-                            <h3>Location</h3>
-                            <p>Portland, OR / Los Angeles, CA</p>
+                        <div className="bioItem">
+                            <div className="bioContent">
+                                <h3>Based in</h3>
+                                <p>Portland, OR // Los Angeles, CA</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="bioItem">
-                        <img src={interestsIcon} alt="Interests" className="bioIcon" />
-                        <div className="bioContent">
-                            <h3>Interests</h3>
-                            <p>Software Development</p>
-                            <p>UI/UX Design</p>
-                            <p>Digital Art</p>
+                        <div className="bioItem">
+                            <div className="bioContent">
+                                <h3>Interested in</h3>
+                                <p>Software, Design, and Art</p>
+                            </div>
                         </div>
-                    </div>
-                </motion.div>
+                    </motion.div>
+                </div>
             </div>
-
+            {/* Journey Section 
             <motion.div 
                 className="personalDescriptionContainer"
                 initial={{ opacity: 0, y: 20 }}
@@ -101,6 +89,7 @@ export default function About() {
                     />
                 ))}
             </motion.div>
+            */}
         </section>
     );
 }

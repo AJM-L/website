@@ -1,44 +1,76 @@
-/* Base Styles */
+/* Featured Projects Section Styles */
 .featured-projects-section {
-    padding: 50px;
-    background-color: var(--color-background);
-    text-align: center;
+  padding: 60px 20px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .section-title {
-    font-size: 2.5rem;
-    color: var(--color-goldenrod);
-    margin-bottom: 30px;
-    font-family: 'Roboto','Helvetica','Arial',sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-goldenrod);
+  margin-bottom: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
-.project-item:hover .project-image {
-    transform: scale(1.05);
+
+.projects-container {
+  margin: 0 auto;
+}
+
+.projects-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Focus styles for accessibility */
+.project-item:focus {
+  outline: 2px solid var(--color-goldenrod);
+  outline-offset: 2px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 725px) {
+  .featured-projects-section {
+    padding: 40px 15px;
   }
   
-  .project-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.8) 50%,
-      rgba(0, 0, 0, 0.6) 100%
-    );
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.3s ease-in-out;
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
   }
   
-  .project-item:hover .project-overlay {
-    visibility: visible;
-    opacity: 1;
+  .projects-row {
+    flex-direction: column;
+    height: auto !important;
+    gap: 15px !important;
   }
+
+  .project-item {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 30px;
+  }
+  
+  .project-image-container {
+    height: auto !important;
+  }
+  
+  .project-image {
+    aspect-ratio: 16/9;
+  }
+  
+  .project-title {
+    font-size: 1rem;
+  }
+}
+
 /* Reuse the grid styles from SharedGridStyles.css */
 .projects-grid {
     display: grid;

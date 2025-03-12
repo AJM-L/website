@@ -40,7 +40,6 @@ export default function Projects() {
 
   return (
     <section className="projects-section">
-      <h1 className="section-title">Projects</h1>
       <div 
         className="projects-container"
         style={{ width: `${containerWidth}px`, margin: '0 auto' }}
@@ -52,7 +51,7 @@ export default function Projects() {
             style={{ 
               height: `${row.height}px`,
               gap: '20px',
-              marginBottom: '20px'
+              marginBottom: '60px'
             }}
           >
             {row.images.map((project) => (
@@ -68,18 +67,17 @@ export default function Projects() {
                 tabIndex={0}
                 onKeyPress={(e) => { if (e.key === 'Enter') openModal(project); }}
               >
-                <img 
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image"
-                  loading="lazy" // Improve performance with lazy loading
-                />
-                <div className="project-overlay"
-                style={{
-                  width: `${project.width}px`,
-                  height: '100%'
-                }}>
+                <div className="project-image-container" style={{ height: '100%', width: '100%' }}>
+                  <img 
+                    src={project.image}
+                    alt={project.title}
+                    className="project-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="item-info-container">
                   <h3 className="project-title">{project.title}</h3>
+                  {project.date && <span className="project-date">{project.date}</span>}
                 </div>
               </div>
             ))}

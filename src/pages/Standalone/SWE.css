@@ -1,0 +1,152 @@
+.swe-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+.swe-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.swe-header h1 {
+    font-size: 3rem;
+    color: var(--color-goldenrod);
+    margin-bottom: 1rem;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-light-text);
+}
+
+.swe-content section {
+    margin-bottom: 4rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--color-goldenrod);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-background-alt);
+    padding-bottom: 0.5rem;
+}
+
+.summary-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-light-text);
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.expertise-card {
+    background: var(--color-background-alt);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+}
+
+.expertise-card h3 {
+    color: var(--color-goldenrod);
+    margin-bottom: 1rem;
+}
+
+.expertise-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expertise-card li {
+    color: var(--color-light-text);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.expertise-card li::before {
+    content: "•";
+    color: var(--color-goldenrod);
+    position: absolute;
+    left: 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--color-background-alt);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: var(--color-background-alt-light);
+}
+
+.project-card h3 {
+    color: var(--color-goldenrod);
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: var(--color-light-text);
+    margin-bottom: 1rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tags span {
+    background: var(--color-background);
+    color: var(--color-goldenrod);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.featured-projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.featured-projects-container h2 {
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .swe-container {
+        padding: 1rem;
+    }
+
+    .swe-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .expertise-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

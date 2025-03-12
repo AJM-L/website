@@ -9,9 +9,6 @@ export default function Home() {
         <div>
             <Landing />
             <FeaturedProjects />
-            <About />
-            <Divider />
-            <Contact />
         </div>
     );
 };

@@ -1,63 +1,30 @@
-import "./Landing.css"
-import Hero from "../../assets/Hero.JPG"
-import Headshot from "../../assets/Headshot.JPG"
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import * as React from "react";
+import "./Landing.css";
+import { useEffect, useRef, useState } from 'react';
 
-function ScrambledText({ text, delay = 100 }) {
-    const [displayText, setDisplayText] = useState('');
-    const characters = 'SDAabcdefghijklmnopqrstuvwxyz';
+function Landing() {
+  
+  return (
+    <main className="container">
+      <header className="header">
+        <h2 className="academicCredentials">
+          Math, <br />Philosophy, <br />Computer Science
+        </h2>
+        <p className="institution">@Claremont McKenna College</p>
+      </header>
 
-    useEffect(() => {
-        let timeout = setTimeout(() => {
-            let iterations = 0;
-            const interval = setInterval(() => {
-                setDisplayText(current => {
-                    const result = text
-                        .split('')
-                        .map((letter, index) => {
-                            if (index < iterations) {
-                                return text[index];
-                            }
-                            return characters[Math.floor(Math.random() * characters.length)];
-                        })
-                        .join('');
-
-                    if (iterations >= text.length) {
-                        clearInterval(interval);
-                    }
-                    iterations += 1/3;
-                    return result;
-                });
-            }, 60);
-
-            return () => clearInterval(interval);
-        }, delay);
-
-        return () => clearTimeout(timeout);
-    }, [text, delay]);
-
-    return displayText;
+      <section className="heroSection">
+        <h1 className="AJ">AJ</h1>
+        <article className="profileInfo">
+          <p className="professionalTitles">
+            Artist, <br />Designer, <br />Software Engineer
+          </p>
+          <h1 className="lastName">Matheson-Lieber</h1>
+          <div></div>
+        </article>
+      </section>
+    </main>
+  );
 }
 
-export default function Landing() {
-    return ( 
-        <section className="landingSection">
-            <div 
-                style={{ backgroundImage: `url(${Hero})` }} 
-                className="heroImage"
-            >
-                <div className="overlay">
-                    <img src={Headshot} className="landingHeadshot" alt="AJ Matheson-Lieber"></img>
-                    <h1 className="landingSiteTitle">AJ Matheson-Lieber</h1>
-                    <p className="landingPersonalTitle">
-                        <ScrambledText text="Software" delay={0} />, {' '}
-                        <ScrambledText text="Design" delay={500} />, {' '}
-                        <ScrambledText text="and" delay={750} /> {" "}
-                        <ScrambledText text="Art" delay={1000} />
-                    </p>
-                </div>
-            </div>
-        </section>
-    );
-}
+export default Landing;

@@ -15,6 +15,8 @@ import AboutPage from './pages/AboutPage';
 import PinterestPins from "./pages/Projects/PinterestPins/PinterestPins"
 import ResumePage from "./pages/ResumePage"
 import LiveBrary from "./pages/Projects/LiveBrary/LiveBrary"
+import SWE from "./pages/Standalone/SWE"
+import CppArt from "./pages/Projects/CppArt/CppArt"
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/projects/pinterestgan" element={<PinterestPins />}></Route>
           <Route path="/projects/livebrary" element={<LiveBrary />}></Route>
+          <Route path="/projects/CppArt" element={<CppArt />}></Route>
+          <Route path="/SoftwareEngineering" element={<SWE />}></Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </MainLayout>

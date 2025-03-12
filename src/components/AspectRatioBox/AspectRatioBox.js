@@ -24,7 +24,6 @@ export default function AspectRatioBox({ image, title, onClick, rowHeight, maxWi
     <div 
       className="aspect-ratio-box"
       style={{
-        height: `${rowHeight}px`,
         width: calculatedWidth,
         maxWidth: '100%'
       }}
@@ -33,17 +32,20 @@ export default function AspectRatioBox({ image, title, onClick, rowHeight, maxWi
       tabIndex={0}
       onKeyPress={(e) => { if (e.key === 'Enter') onClick(); }}
     >
-      <div className="aspect-ratio-box-inside">
+      <div 
+        className="aspect-ratio-box-inside"
+        style={{
+          height: `${rowHeight}px`,
+        }}
+      >
         <img 
           src={image} 
           alt={title} 
           className="responsive-image"
           loading="lazy"
         />
-        <div className="image-overlay">
-          <h3 className="image-title">{title}</h3>
-        </div>
       </div>
+      <h3 className="image-title">{title}</h3>
     </div>
   );
 } 

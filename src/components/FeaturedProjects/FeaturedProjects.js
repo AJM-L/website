@@ -121,7 +121,6 @@ export default function FeaturedProjects() {
 
   return (
     <section id="projects" className="featured-projects-section">
-      <h2 className="section-title">Featured Projects</h2>
       <div 
         className="projects-container"
         style={{ width: `${containerWidth}px`, margin: '0 auto' }}
@@ -133,7 +132,7 @@ export default function FeaturedProjects() {
             style={{ 
               height: `${row.height}px`,
               gap: '20px',
-              marginBottom: '20px'
+              marginBottom: '60px' // Increased margin to ensure space for titles
             }}
           >
             {row.images.map((project) => (
@@ -149,19 +148,17 @@ export default function FeaturedProjects() {
                 tabIndex={0}
                 onKeyPress={(e) => { if (e.key === 'Enter') openModal(project); }}
               >
-                <img 
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image"
-                  loading="lazy"
-                />
-                <div className="project-overlay"
-                style={{
-                  width: `${project.width}px`,
-                  height: '100%'
-                }}>
-                  <h3 className="project-title"
-                  >{project.title}</h3>
+                <div className="project-image-container" style={{ height: '100%', width: '100%' }}>
+                  <img 
+                    src={project.image}
+                    alt={project.title}
+                    className="project-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="item-info-container">
+                  <h3 className="project-title">{project.title}</h3>
+                  {project.date && <span className="project-date">{project.date}</span>}
                 </div>
               </div>
             ))}

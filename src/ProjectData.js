@@ -12,7 +12,7 @@ import FakePins from "./assets/Projects/PinterestDCGAN/FakePins.png"
 import PDfReader from "./assets/Projects/PdfReader/PDFReader.png"
 import IBMImage from "./assets/Projects/InstructlabUI/InstructlabUI.png"
 import LiveBraryImage from "./assets/Projects/LiveBrary/LiveBrary.png"
-
+import CppArtImage from "./assets/Projects/CppArt/CppArt.jpg"
 
 import Python from "./assets/TechIcons/Python.svg"
 import Jupyter from "./assets/TechIcons/Jupyter.svg"
@@ -24,6 +24,7 @@ import Flask from "./assets/TechIcons/Flask.svg"
 import HTML5 from "./assets/TechIcons/HTML5.svg"
 import ReactIcon from "./assets/TechIcons/React.svg"
 import Figma from "./assets/TechIcons/Figma.svg"
+import Cpp from "./assets/TechIcons/c++.svg"
 
 // Helper function to create a project entry
 const createProject = ({
@@ -71,6 +72,18 @@ createProject({
 */
 
 const projectData = [
+    createProject({
+        id: "",
+        title: "C++ Art",
+        pageLink: "#/projects/CppArt",
+        date: "February 2025",
+        image: CppArtImage,
+        shortDescription: "Exploring C++ and OpenCV",
+        longDescripton: createDescription([
+            "I love C++ and OpenCV. Below are some of the explorations that I have made into using c++ and the opencv library to create art."
+        ]),
+        techStack: [Cpp]
+    }),
     createProject({
         id: "LiveBrary",
         title: "LiveBrary",

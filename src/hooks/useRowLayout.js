@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 
-const TARGET_HEIGHT = 500;
+const TARGET_HEIGHT = 350; // Reduced further to leave space for titles and details
 const CONTAINER_WIDTH_PERCENT = 0.8; // 80% of screen width
 const MIN_IMAGES_PER_ROW = 1;
 const MAX_IMAGES_PER_ROW = 4;
 const GAP = 20; // Gap between images in pixels
+const TITLE_HEIGHT = 30; // Estimated height for titles
+const DETAILS_HEIGHT = 60; // Estimated height for additional details (date, medium, dimensions)
 
 export default function useRowLayout(images) {
   const [rows, setRows] = useState([]);
