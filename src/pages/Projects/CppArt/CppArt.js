@@ -142,7 +142,7 @@ export default function CppArt() {
 
       <div className="cpp-art-content">
         {/* Carousel with all artwork */}
-        <Section title="Artwork Gallery">
+        <Section title="">
           <Carousel items={allArtwork} />
         </Section>
 

@@ -131,6 +131,7 @@
 
 .autoplay-button.playing {
   background-color: var(--color-goldenrod);
+  color: black;
 }
 
 .autoplay-button:hover {
