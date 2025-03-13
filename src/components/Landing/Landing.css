@@ -79,11 +79,15 @@
 .academicCredentials {
     padding: 0vw;
     margin: 0 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1vh;
 }
 
 .institution {
     padding: 0vw;
     margin: 0 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5vh;
 }
 
 .container {
@@ -92,4 +96,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 102vh;
+    }
 }
