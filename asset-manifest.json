@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/website/static/css/main.5d2e8192.css",
-    "main.js": "/website/static/js/main.a44d6682.js",
+    "main.js": "/website/static/js/main.13378742.js",
     "static/js/453.b03e3c98.chunk.js": "/website/static/js/453.b03e3c98.chunk.js",
     "static/media/Poster1.png": "/website/static/media/Poster1.f71ee06fcf290d7a42f8.png",
     "static/media/Lizzie'sPoster.png": "/website/static/media/Lizzie'sPoster.2e7d1b2db0e5bb3d4f47.png",
@@ -68,7 +68,7 @@
     "static/media/output_optimized_matrix_random copy.mp4": "/website/static/media/output_optimized_matrix_random copy.2b47ad57ad2137a2812e.mp4",
     "static/media/vpython.png": "/website/static/media/vpython.0bbe0c274a5adbab0826.png",
     "static/media/StandingOnBusiness.png": "/website/static/media/StandingOnBusiness.48fdca0c63f1f6fa36f2.png",
-    "static/media/resume.pdf": "/website/static/media/resume.bf08c8bb0847761bbf38.pdf",
+    "static/media/resume.pdf": "/website/static/media/resume.bdeb450f55b8b80f879c.pdf",
     "static/media/output_optimized_pixel_final.mp4": "/website/static/media/output_optimized_pixel_final.0c2e23b2b3dd3d51aa51.mp4",
     "static/media/output_random.mp4": "/website/static/media/output_random.51d3cee1f46461d5faac.mp4",
     "static/media/LiveBrary.png": "/website/static/media/LiveBrary.5b8c18866515e964b152.png",
@@ -112,11 +112,11 @@
     "static/media/Kaggle.svg": "/website/static/media/Kaggle.cfe8af0d589d533643e982dee012ca1d.svg",
     "static/media/PyTorch.svg": "/website/static/media/PyTorch.091d29874e55ca1389ecf4a0eb434553.svg",
     "main.5d2e8192.css.map": "/website/static/css/main.5d2e8192.css.map",
-    "main.a44d6682.js.map": "/website/static/js/main.a44d6682.js.map",
+    "main.13378742.js.map": "/website/static/js/main.13378742.js.map",
     "453.b03e3c98.chunk.js.map": "/website/static/js/453.b03e3c98.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5d2e8192.css",
-    "static/js/main.a44d6682.js"
+    "static/js/main.13378742.js"
   ]
 }
