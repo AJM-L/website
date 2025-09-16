@@ -19,11 +19,19 @@
 
 .footerLeft {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .footerCopyright {
     color: var(--color-light-text);
     font-size: 0.9rem;
+    margin: 0;
+}
+
+.footerInfo {
+    color: gray;
+    font-size: 0.7rem;
     margin: 0;
 }
 

@@ -9,6 +9,7 @@ export default function Footer() {
             <div className="footerContent">
                 <div className="footerLeft">
                     <p className="footerCopyright">© 2025 AJ Matheson-Lieber</p>
+                    <p className="footerInfo">Designed and developed by me in React</p>
                 </div>
                 
                 <div className="socialContainer">

@@ -100,6 +100,30 @@
 
 @media (max-width: 768px) {
     .container {
-        height: 102vh;
+        min-height: 100vh;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    
+    .heroSection {
+        height: auto;
+        min-height: 50vh;
+        flex-wrap: wrap;
+    }
+    
+    .AJ {
+        height: 48vw;
+        width: 30vw;
+        font-size: 25vw;
+    }
+    
+    .profileInfo {
+        height: 40vw;
+        width: 70vw;
+    }
+
+    .lastName {
+        font-size: 8.5vw;
+        padding-bottom: 30vw;
     }
 }

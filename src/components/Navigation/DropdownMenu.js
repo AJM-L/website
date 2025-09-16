@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import './DropdownMenu.css';
@@ -23,6 +23,42 @@ const MenuItem = ({ item, onClose, index, total }) => {
   
   // Determine if we should use custom animation or default
   const hasCustomAnimation = item.animation !== undefined;
+
+  // Save initial random tilt
+  const randomTilt = React.useMemo(() => Math.random() * 40 - 20, []);
+  
+  // Responsive sizing for menu items based on screen width
+  const [dimensions, setDimensions] = useState({ width: '180px', height: '90px' });
+
+  // Update dimensions when window size changes
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      
+      if (width > 1200) {
+        setDimensions({ width: '180px', height: '90px' });
+      } else if (width > 992) {
+        setDimensions({ width: '160px', height: '80px' });
+      } else if (width > 768) {
+        setDimensions({ width: '140px', height: '70px' });
+      } else if (width > 480) {
+        setDimensions({ width: '120px', height: '60px' });
+      } else if (width > 360) {
+        setDimensions({ width: '100px', height: '50px' });
+      } else {
+        setDimensions({ width: '80px', height: '40px' });
+      }
+    };
+
+    // Set initial dimensions
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   // Set up initial animation properties
   const initialProps = hasCustomAnimation 
@@ -92,24 +128,32 @@ const MenuItem = ({ item, onClose, index, total }) => {
       animate={animateProps}
       exit={exitProps}
       whileHover={{ 
-        scale: 1.03,
+        scale: 1.1,
         transition: { 
           type: 'spring', 
           stiffness: 400, 
           damping: 10 
         }
       }}
-      whileTap={{ scale: 0.97 }}
-      drag="y"
-      dragConstraints={{ top: 0, bottom: 5 }}
-      dragElastic={0.05}
+      whileTap={{ scale: 0.95 }}
+      style={{
+        width: item.animation?.size?.width || dimensions.width,
+        height: item.animation?.size?.height || dimensions.height,
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        x: animateProps.x,
+        y: animateProps.y,
+        rotate: animateProps.rotate,
+        transformOrigin: 'center center',
+        transform: 'translate(-50%, -50%)'
+      }}
     >
       <Link 
         to={item.path} 
         className="menu-item" 
         onClick={onClose}
         aria-label={`Navigate to ${item.name}`}
-        style={{ width: item.animation?.size?.width || '100%', height: item.animation?.size?.height || '100%' }}
       >
         {item.name}
       </Link>
@@ -119,6 +163,38 @@ const MenuItem = ({ item, onClose, index, total }) => {
 
 // Main DropdownContainer component
 const DropdownMenu = ({ isOpen, onClose, navigationLinks }) => {
+  // Adjust circle radius based on screen size
+  const [circleRadius, setCircleRadius] = useState(230);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const minDimension = Math.min(width, height);
+      
+      // Adjust radius based on screen dimensions to prevent overflow
+      // Make sure there's enough space for buttons plus padding
+      if (width < 576) {
+        setCircleRadius(Math.min(minDimension * 0.25, 150));
+      } else if (width < 768) {
+        setCircleRadius(Math.min(minDimension * 0.3, 180));
+      } else if (width < 992) {
+        setCircleRadius(Math.min(minDimension * 0.35, 200));
+      } else {
+        setCircleRadius(Math.min(minDimension * 0.4, 230));
+      }
+    };
+    
+    // Set initial radius
+    handleResize();
+    
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -132,19 +208,11 @@ const DropdownMenu = ({ isOpen, onClose, navigationLinks }) => {
             transition={{ duration: 0.4 }}
             onClick={onClose}
             aria-hidden="true"
-            style={{
-              width: '100%',
-              height: '100%'
-            }}
           />
           
           {/* Container for menu items */}
           <motion.div 
             className="menu-items-container"
-            style={{ 
-              width: '100%',
-              height: '100%'
-            }}
           >
             {navigationLinks.map((item, index) => (
               <MenuItem 
@@ -153,10 +221,6 @@ const DropdownMenu = ({ isOpen, onClose, navigationLinks }) => {
                 onClose={onClose}
                 index={index}
                 total={navigationLinks.length}
-                style={{
-                  width: item.animation?.size?.width || '100%',
-                  height: item.animation?.size?.height || '100%'
-                }}
               />
             ))}
           </motion.div>

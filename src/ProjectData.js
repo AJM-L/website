@@ -13,6 +13,7 @@ import PDfReader from "./assets/Projects/PdfReader/PDFReader.png"
 import IBMImage from "./assets/Projects/InstructlabUI/InstructlabUI.png"
 import LiveBraryImage from "./assets/Projects/LiveBrary/LiveBrary.png"
 import CppArtImage from "./assets/Projects/CppArt/CppArt.jpg"
+import CWFCoverImage from "./assets/Projects/CWF/homepage.png"
 
 import Python from "./assets/TechIcons/Python.svg"
 import Jupyter from "./assets/TechIcons/Jupyter.svg"
@@ -25,6 +26,7 @@ import HTML5 from "./assets/TechIcons/HTML5.svg"
 import ReactIcon from "./assets/TechIcons/React.svg"
 import Figma from "./assets/TechIcons/Figma.svg"
 import Cpp from "./assets/TechIcons/c++.svg"
+import svelte from "./assets/TechIcons/svelte.png"
 
 // Helper function to create a project entry
 const createProject = ({
@@ -72,6 +74,19 @@ createProject({
 */
 
 const projectData = [
+    createProject({
+        id: "CWF",
+        title: "CWF",
+        githubLink: "https://ajm-l.github.io/cwf-site",
+        date: "August 2025",
+        image: CWFCoverImage,
+        shortDescription: "Research, art, and documentation of the waterfalls and stewarship efforts of the Pacific Northwest",
+        longDescripton: createDescription([
+            "This is the project that I made as a Gould Center Creative Works Fellowship during the summer of 2025. I was able to explore the Pacific Northwest and document the waterfalls and stewardship efforts of the region.",
+            "I created art, wrote articles, interviewed experts, and created a website to document my findings. I was able to learn about the history, the stewardship efforts, and the ongoing environmentla challenged of the region."
+        ]),
+        techStack: [svelte]
+    }),
     createProject({
         id: "",
         title: "C++ Art",

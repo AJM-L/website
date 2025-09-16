@@ -43,3 +43,17 @@ code {
     --Paper-overlay: none !important;
     background-image: none !important;
 }
+
+/* Replace the universal selector with more specific selectors */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Apply box-sizing to all elements but not overflow-x */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

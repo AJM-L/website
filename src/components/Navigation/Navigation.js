@@ -11,6 +11,42 @@ import './Navigation.css';
 export default function Navigation() {
   const [openNav, setOpenNav] = useState(false);
   const { scrollDirection } = useScroll();
+  const [circleRadius, setCircleRadius] = useState(230);
+  const [buttonPosition, setButtonPosition] = useState({ right: '16px', top: '16px' });
+
+  // Update circle radius based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const minDimension = Math.min(width, height);
+      
+      // Adjust radius based on screen dimensions to prevent overflow
+      // Make sure there's enough space for buttons plus padding
+      if (width < 576) {
+        setCircleRadius(Math.min(minDimension * 0.25, 150));
+        setButtonPosition({ right: '8px', top: '8px' });
+      } else if (width < 768) {
+        setCircleRadius(Math.min(minDimension * 0.3, 180));
+        setButtonPosition({ right: '12px', top: '12px' });
+      } else if (width < 992) {
+        setCircleRadius(Math.min(minDimension * 0.35, 200));
+        setButtonPosition({ right: '16px', top: '16px' });
+      } else {
+        setCircleRadius(Math.min(minDimension * 0.4, 230));
+        setButtonPosition({ right: '16px', top: '16px' });
+      }
+    };
+    
+    // Set initial radius and button position
+    handleResize();
+    
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const toggleNav = () => {
     setOpenNav(!openNav);
@@ -49,9 +85,13 @@ export default function Navigation() {
     navbar: {
       backgroundColor: 'transparent',
       boxShadow: 'none',
-      width: 'auto',
-      right: '0px',
-      left: 'auto',
+      width: '100%',
+      padding: 0,
+      position: 'fixed',
+      right: 0,
+      left: 0,
+      top: 0,
+      pointerEvents: 'none', // Let clicks pass through the AppBar except for the button
       boxShadow: 'none !important',
       '--Paper-shadow': 'none !important',
       '--Paper-overlay': 'none !important',
@@ -66,86 +106,119 @@ export default function Navigation() {
       backgroundColor: 'transparent',
       transition: "all 0.5s"
     },
+    menuButtonContainer: {
+      position: 'fixed', // Changed from absolute to fixed
+      top: buttonPosition.top,
+      right: buttonPosition.right,
+      zIndex: 9999, // Higher z-index to guarantee it stays on top of everything
+      pointerEvents: 'auto',
+    },
     menuButton: {
-      margin: '16px',
       boxShadow: 'none',
       backgroundColor: 'transparent',
-      zIndex: 2000, // Higher z-index to ensure it stays on top
+      pointerEvents: 'auto',
     },
   };
 
-  // Enhanced navigation links with custom animation properties
-  const navigationLinks = [
-    { 
-      name: 'Projects', 
-      path: '/projects', 
-      animation: {
-        initial: { x: 400, y: 300, rotate: -10 },
-        animate: { x: 0, y: 0 },
-        exit: { x: -100, y: window.innerHeight + 200 },
-        transition: { mass: 1.5, bounce: 0.4 },
-        size: { width: "400px", height: "200px" }
-      }
-    },
-    { 
-      name: 'Resume', 
-      path: '/resume',
-      animation: {
-        initial: { x: 200, y: 150, rotate: -10 },
-        animate: { x: 150, y: 130 },
-        exit: { x: 150, y: window.innerHeight + 150 },
-        transition: { mass: 1.2, bounce: 0.3 },
-        size: { width: "200px", height: "200px" }
-      }
-    },
-    { 
-      name: 'Home', 
-      path: '/',
-      animation: {
-        initial: { x: 150, y: 200, rotate: -5 },
-        animate: { x: -130, y: 200 },
-        exit: { x: -200, y: window.innerHeight + 100 },
-        transition: { mass: 1.8, bounce: 0.5 },
-        size: { width: "200px", height: "200px"}
-      }
-    },
-    { 
-      name: 'Contact', 
-      path: 'mailto:amatheson53@students.claremontmckenna.edu',
-      animation: {
-        initial: { x: 150, y: 250, rotate: 5 },
-        animate: { x: -150, y: -60 },
-        exit: { x: 250, y: window.innerHeight + 250 },
-        transition: { mass: 1.3, bounce: 0.6 },
-        size: { width: "200px", height: "200px" }
-      }
-    },
-    { 
-      name: 'About', 
-      path: '/about',
-      animation: {
-        initial: { x: -200, y: 330, rotate: -15 },
-        animate: { x: -20, y: 160 },
-        exit: { x: -150, y: window.innerHeight + 300 },
-        transition: { mass: 1.6, bounce: 0.35 },
-        size: { width: "200px", height: "200px" }
-      }
-    },
-    { 
-      name: 'Art', 
-      path: '/art',
-      animation: {
-        initial: { x: 0, y: -250, rotate: 15 },
-        animate: { x: 70, y: 20 },
-        exit: { x: 100, y: window.innerHeight + 350 },
-        transition: { mass: 1.4, bounce: 0.45 },
-        size: { width: "200px", height: "200px" }
-      }
-    },
-  ];
+  // Function to generate random tilt between -20 and 20 degrees
+  const randomTilt = () => Math.random() * 40 - 20;
+
+  // Calculate positions in a circle
+  const calculateCirclePosition = (index, total) => {
+    // Calculate angle around the circle
+    const angleStep = (2 * Math.PI) / total;
+    const angle = index * angleStep - Math.PI / 2; // Start from top (subtract Pi/2)
+    
+    return {
+      x: Math.cos(angle) * circleRadius - 100,
+      y: Math.sin(angle) * circleRadius - 50,
+    };
+  };
+
+  // Calculate center of screen
+  const screenCenter = {
+    x: window.innerWidth / 2,
+    y: window.innerHeight / 2
+  };
+
+  // Navigation links with circle layout positions
+  const navigationLinks = React.useMemo(() => {
+    // Pre-generate random tilts for each menu item
+    const tilts = Array(6).fill().map(() => randomTilt());
+    
+    return [
+      {
+        name: 'Projects',
+        path: '/projects',
+        animation: {
+          initial: { x: screenCenter.x, y: screenCenter.y, rotate: tilts[0], scale: 0.5, opacity: 0 },
+          animate: { ...calculateCirclePosition(0, 6), rotate: tilts[0], scale: 1, opacity: 1 },
+          exit: { scale: 0.5, y: window.innerHeight + 200, opacity: 0 },
+          transition: { mass: 1.5, bounce: 0.4, duration: 0.6 },
+          size: { width: "180px", height: "90px" }
+        }
+      },
+      {
+        name: 'Resume',
+        path: '/resume',
+        animation: {
+          initial: { x: screenCenter.x, y: screenCenter.y, rotate: tilts[1], scale: 0.5, opacity: 0 },
+          animate: { ...calculateCirclePosition(1, 6), rotate: tilts[1], scale: 1, opacity: 1 },
+          exit: { scale: 0.5, y: window.innerHeight + 150, opacity: 0 },
+          transition: { mass: 1.2, bounce: 0.3, duration: 0.6 },
+          size: { width: "180px", height: "90px" }
+        }
+      },
+      {
+        name: 'Home',
+        path: '/',
+        animation: {
+          initial: { x: screenCenter.x, y: screenCenter.y, rotate: tilts[2], scale: 0.5, opacity: 0 },
+          animate: { ...calculateCirclePosition(2, 6), rotate: tilts[2], scale: 1, opacity: 1 },
+          exit: { scale: 0.5, y: window.innerHeight + 100, opacity: 0 },
+          transition: { mass: 1.8, bounce: 0.5, duration: 0.6 },
+          size: { width: "180px", height: "90px" }
+        }
+      },
+      {
+        name: 'Contact',
+        path: 'mailto:amatheson53@students.claremontmckenna.edu',
+        animation: {
+          initial: { x: screenCenter.x, y: screenCenter.y, rotate: tilts[3], scale: 0.5, opacity: 0 },
+          animate: { ...calculateCirclePosition(3, 6), rotate: tilts[3], scale: 1, opacity: 1 },
+          exit: { scale: 0.5, y: window.innerHeight + 250, opacity: 0 },
+          transition: { mass: 1.3, bounce: 0.6, duration: 0.6 },
+          size: { width: "180px", height: "90px" }
+        }
+      },
+      {
+        name: 'About',
+        path: '/about',
+        animation: {
+          initial: { x: screenCenter.x, y: screenCenter.y, rotate: tilts[4], scale: 0.5, opacity: 0 },
+          animate: { ...calculateCirclePosition(4, 6), rotate: tilts[4], scale: 1, opacity: 1 },
+          exit: { scale: 0.5, y: window.innerHeight + 300, opacity: 0 },
+          transition: { mass: 1.6, bounce: 0.35, duration: 0.6 },
+          size: { width: "180px", height: "90px" }
+        }
+      },
+      {
+        name: 'Art',
+        path: '/art',
+        animation: {
+          initial: { x: screenCenter.x, y: screenCenter.y, rotate: tilts[5], scale: 0.5, opacity: 0 },
+          animate: { ...calculateCirclePosition(5, 6), rotate: tilts[5], scale: 1, opacity: 1 },
+          exit: { scale: 0.5, y: window.innerHeight + 350, opacity: 0 },
+          transition: { mass: 1.4, bounce: 0.45, duration: 0.6 },
+          size: { width: "180px", height: "90px" }
+        }
+      },
+    ];
+  }, [circleRadius]);
 
   return (
     <>
+      {/* Separated AppBar and menu button for better control */}
       <AppBar 
         className="navbar" 
         style={{
@@ -169,7 +242,10 @@ export default function Navigation() {
             backgroundImage: 'none',
           }
         }}
-      >
+      />
+      
+      {/* Separate fixed position for the menu button to prevent page-specific style conflicts */}
+      <div className="menu-button-container" style={styles.menuButtonContainer}>
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
@@ -196,9 +272,9 @@ export default function Navigation() {
             </AnimatePresence>
           </IconButton>
         </motion.div>
-      </AppBar>
+      </div>
       
-      {/* New DropdownMenu component */}
+      {/* DropdownMenu component */}
       <DropdownMenu 
         isOpen={openNav} 
         onClose={() => setOpenNav(false)} 

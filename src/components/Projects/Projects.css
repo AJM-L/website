@@ -122,11 +122,11 @@ ul {
 
 /* Projects Section Styles */
 .projects-section {
-  padding: 60px 20px;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  max-width: 1400px;
-  margin: 0 auto;
+    padding: 60px 0;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden; /* Ensure the section itself contains all children */
 }
 
 .section-title {
@@ -140,15 +140,24 @@ ul {
 }
 
 .projects-container {
-  margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .projects-row {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 20px;
-  position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    box-sizing: border-box;
+    overflow: visible; /* Allow items to be visible with animations */
+}
+
+.project-item {
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: visible; /* Allow hover effects to be visible */
 }
 
 /* Focus styles for accessibility */

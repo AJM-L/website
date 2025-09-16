@@ -61,11 +61,12 @@
 
 /* Art Section Styles */
 .art-section {
-  padding: 60px 20px;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  max-width: 1400px;
-  margin: 0 auto;
+
+  padding: 60px 0;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden; /* Ensure the section itself contains all children */
 }
 
 .section-title {
@@ -85,20 +86,20 @@
 }
 
 .masonry-grid {
-  display: grid;
-  grid-auto-flow: dense;
-  grid-template-rows: repeat(auto-fill, 300px);
-  grid-auto-columns: max-content;
-  gap: 20px;
-  padding: 20px;
-  width: 100%;
-  justify-content: center;
+    display: flex;
+    width: 100%;
+    margin-left: -10px; /* Compensate for padding within items */
+    box-sizing: border-box;
+    overflow: visible; /* Allow items to be visible with animations */
+    flex-wrap: wrap;
 }
 
 .masonry-grid-item {
-  height: 300px;
-  min-width: 200px;
-  max-width: 600px;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: visible; /* Allow hover effects to be visible */
 }
 
 .masonry-grid-item.wide {
