@@ -17,6 +17,7 @@ import ResumePage from "./pages/ResumePage"
 import LiveBrary from "./pages/Projects/LiveBrary/LiveBrary"
 import SWE from "./pages/Standalone/SWE"
 import CppArt from "./pages/Projects/CppArt/CppArt"
+import StudySync from "./pages/Projects/StudySync/StudySync"
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/projects/pinterestgan" element={<PinterestPins />}></Route>
           <Route path="/projects/livebrary" element={<LiveBrary />}></Route>
           <Route path="/projects/CppArt" element={<CppArt />}></Route>
+          <Route path="/projects/studysync" element={<StudySync />}></Route>
           <Route path="/SoftwareEngineering" element={<SWE />}></Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

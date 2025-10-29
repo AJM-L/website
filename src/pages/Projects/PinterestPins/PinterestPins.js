@@ -42,7 +42,7 @@ export default function PinterestPins() {
                 
                 <div className="intro-section">
                     <p>
-                        What happens when AI tries to recreate your Pinterest aesthetic? 
+                        What happens when AI attempts to replicate your Pinterest aesthetic? 
                         This project explores the intersection of personal data, machine learning, 
                         and artistic expression through AI-generated images based on Pinterest profiles.
                     </p>
@@ -60,8 +60,8 @@ export default function PinterestPins() {
                     <h3>Technical Implementation <span className="tech-badge">DCGAN</span> <span className="tech-badge">PyTorch</span></h3>
                     <p>
                         The heart of this project is a Deep Convolutional Generative Adversarial Network (DCGAN) 
-                        built with PyTorch. This specialized neural network architecture uses two competing 
-                        networks to generate realistic synthetic images.
+                        built with PyTorch. This specialized neural network architecture uses two large competing 
+                        networks made of convolutional layers to generate realistic synthetic images.
                     </p>
 
                     <div className="technical-details">
@@ -69,7 +69,7 @@ export default function PinterestPins() {
                             className="details-toggle"
                             onClick={() => setShowDetails(!showDetails)}
                         >
-                            {showDetails ? "Hide nerd stuff" : "Show nerd stuff"}
+                            {showDetails ? "Hide technical details" : "Show technical details"}
                         </button>
                         {showDetails && (
                             <p>

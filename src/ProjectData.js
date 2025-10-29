@@ -2,11 +2,6 @@ import SpotifyImageGenImage from "./assets/Projects/SpotifyImageGenerator/VMXMXX
 import FashionProductDCGANImage from "./assets/Projects/DCGANFashion/15EpochsSeed999 copy.png"
 import ArtReccomendationImage from "./assets/Projects/PaintingReccomendation/Screenshot 2024-07-25 at 2.46.08 PM.png"
 import MLPImage from "./assets/Projects/MLP/MLPImg.png"
-import vPythonImage from "./assets/Projects/vPython3dGame/vpython.png"
-import AntColonyImage from "./assets/Projects/AntColonySim/AntColonyImage.png"
-import MandelbrotImage from "./assets/Projects/Mandelbrot/test.png"
-import WireframeImage from "./assets/Projects/Wireframe/Wireframe.png"
-import TicTacToeImage from "./assets/Projects/BoardGames/TicTacToeImage.png"
 import PinterestImage from "./assets/Projects/PinterestScaper/PinterestHomepage.png"
 import FakePins from "./assets/Projects/PinterestDCGAN/FakePins.png"
 import PDfReader from "./assets/Projects/PdfReader/PDFReader.png"
@@ -14,6 +9,8 @@ import IBMImage from "./assets/Projects/InstructlabUI/InstructlabUI.png"
 import LiveBraryImage from "./assets/Projects/LiveBrary/LiveBrary.png"
 import CppArtImage from "./assets/Projects/CppArt/CppArt.jpg"
 import CWFCoverImage from "./assets/Projects/CWF/homepage.png"
+import YtToMp3Image from "./assets/Projects/YTtoMP3/yt2mp3.png"
+import StudySyncImage from "./assets/Projects/StudySync/StudySync.png"
 
 import Python from "./assets/TechIcons/Python.svg"
 import Jupyter from "./assets/TechIcons/Jupyter.svg"
@@ -80,12 +77,27 @@ const projectData = [
         githubLink: "https://ajm-l.github.io/cwf-site",
         date: "August 2025",
         image: CWFCoverImage,
-        shortDescription: "Research, art, and documentation of the waterfalls and stewarship efforts of the Pacific Northwest",
-        longDescripton: createDescription([
+        shortDescription: "Summer 2025 Gould Center Creative Works Fellowship Project website.",
+        longDescription: createDescription([
             "This is the project that I made as a Gould Center Creative Works Fellowship during the summer of 2025. I was able to explore the Pacific Northwest and document the waterfalls and stewardship efforts of the region.",
             "I created art, wrote articles, interviewed experts, and created a website to document my findings. I was able to learn about the history, the stewardship efforts, and the ongoing environmentla challenged of the region."
         ]),
         techStack: [svelte]
+    }),
+    createProject({
+        id: "StudySync",
+        title: "StudySync",
+        githubLink: "https://github.com/bennet-m/Suggesting-collaboration-times",
+        pageLink: "#/projects/studysync",
+        date: "February 2025",
+        image: StudySyncImage,
+        shortDescription: "Hackathon project that matches students with collaboration partners based on shared assignments and free time.",
+        longDescription: createDescription([
+            "Built at 5C Hack with a team of four, StudySync addresses the growing challenge of student collaboration in an increasingly digital learning environment. The pandemic normalized asynchronous coursework, and with AI tools making solo work easier, meaningful peer connection has declined.",
+            "The web application uses Google OAuth to access users' calendars, identifying upcoming assignments and free time blocks. It then suggests study partners based on matching assignment due dates and overlapping availability, making it easy to schedule co-working sessions.",
+            "I focused on frontend development using React.js and contributed to full-stack features. The backend was built with Python Flask, MongoDB, and integrated with Google Calendar API for real-time availability matching. Privacy was a key concern—we only show suggested meeting times, never full calendars, and users can opt out at any time."
+        ]),
+        techStack: [ReactIcon, Python, Flask]
     }),
     createProject({
         id: "",
@@ -94,7 +106,7 @@ const projectData = [
         date: "February 2025",
         image: CppArtImage,
         shortDescription: "Exploring C++ and OpenCV",
-        longDescripton: createDescription([
+        longDescription: createDescription([
             "I love C++ and OpenCV. Below are some of the explorations that I have made into using c++ and the opencv library to create art."
         ]),
         techStack: [Cpp]
@@ -105,14 +117,28 @@ const projectData = [
         pageLink: "#/projects/livebrary",
         date: "February 2025",
         image: LiveBraryImage,
-        shortDescription: "LiveBrary is an app that allows elderly people to share their experiences and connect with others. I worked with a team of 4 to design this app for Rice Design-a-thon 2025.",
-        longDescripton: createDescription([
+        shortDescription: "Live-streaming platform designed for seniors to share their skills, crafts, recipes, life stories, and more.",
+        longDescription: createDescription([
             "Livebrary is a live-streaming platform designed to bridge the generational gap by empowering seniors to share their skills, stories, and passions with a global audience. ",
             "As technology increasingly isolates older populations from meaningful interactions, Livebrary provides a space where seniors can teach recipes, demonstrate crafts, offer wisdom, and engage in real-time conversations, ensuring their legacy is preserved and appreciated. ",
-            "Through extensive research, including interviews with seniors and younger individuals, secondary research from online forums, and scientific studies on loneliness, the project identified key needs such as community, recognition, and accessibility. The platform’s design prioritizes ease of use, featuring intuitive navigation and live video capabilities to foster genuine connections. ",
+            "Through extensive research, including interviews with seniors and younger individuals, secondary research from online forums, and scientific studies on loneliness, the project identified key needs such as community, recognition, and accessibility. The platform's design prioritizes ease of use, featuring intuitive navigation and live video capabilities to foster genuine connections. ",
             "By addressing the barriers that traditional social media platforms present for seniors, Livebrary creates an inclusive digital space where experience meets curiosity, ensuring that valuable stories and knowledge are never lost to time.",
         ]),
         techStack: [Figma]
+    }),
+    createProject({
+        id: "YtToMp3",
+        title: "YouTube to MP3 Converter",
+        githubLink: "https://github.com/AJM-L/YtToMp3",
+        date: "January 2025",
+        image: YtToMp3Image,
+        shortDescription: "Local web application for converting YouTube videos to MP3 audio files with a clean, customizable interface.",
+        longDescription: createDescription([
+            "I created this YouTube to MP3 converter because I wanted a reliable conversion tool that I could customize to my needs without the limitations, ads, or privacy concerns of commercial solutions.",
+            "The application features a React frontend with a Flask backend, using PyTubeFix for YouTube video processing. Users can simply paste a YouTube URL, click convert, and receive a high-quality MP3 file. The interface includes visual feedback during conversion and the ability to clear downloads with one button.",
+            "This project strengthened my full-stack development skills, combining modern JavaScript with Python backend development. It taught me about API integration, file management, cross-origin resource sharing, and creating intuitive user interfaces for media processing applications."
+        ]),
+        techStack: [ReactIcon, Flask, Python]
     }),
     createProject({
         id: "IBMProject",
@@ -121,7 +147,7 @@ const projectData = [
         date: "October-December 2024",
         image: IBMImage,
         shortDescription: "UI/UX for IBM's Instructlab",
-        longDescripton: createDescription([
+        longDescription: createDescription([
             "Collaborated on a 2-month project with a cross-functional team to design and prototype a collaborative data review tool for IBM's InstructLab, improving efficiency and consistency in reviewing synthetic datasets for enterprise-level AI training.",
             "Conducted user research and testing with IBM developers, resulting in a solution that streamlined workflows, enhanced team collaboration, and addressed critical pain points, reducing model training setbacks."
         ]),
@@ -130,15 +156,14 @@ const projectData = [
     createProject({
         id: "EasyPdfReader",
         title: "PDF Reader App",
-        githubLink: "https://easydocumentreader.com",
+        githubLink: "https://github.com/AJM-L/",
         date: "September-November 2024",
         image: PDfReader,
         shortDescription: "PDF Reader application with lifelike text-to-speech, Azure OCR, and user authentication.",
         longDescription: createDescription([
-            "For a school club project in collaboration with the AI company LMNT, I developed a web application using Python and JavaScript, with Flask for the backend and React for the frontend. The backend is hosted on Heroku, while the frontend is deployed on Netlify.",
-            "The application enables users to upload PDFs, which are converted to text using Azure Web Services' OCR technology. The text is then processed through a text-to-speech API to create audio playback. Additionally, users can save and download the generated audio files for offline use.",
-            "This project strengthened my skills in deployment, database management, backend/frontend integration, user authentication, and leveraging Azure Web Services.",
-            "The app is live at easydocumentreader.com"
+            "For a school club project in collaboration with the AI company LMNT, I developed a web application using Python and JavaScript, with Flask for the backend and React for the frontend.",
+            "The application enabled users to upload PDFs, which were converted to text using Azure Web Services' OCR technology. The text was then processed through a text-to-speech API to create audio playback. Additionally, users could save and download the generated audio files for offline use.",
+            "This project strengthened my skills in deployment, database management, backend/frontend integration, user authentication, and leveraging Azure Web Services."
         ]),
         techStack: [Flask, Python, ReactIcon]
     }),
@@ -219,68 +244,6 @@ const projectData = [
             "I did not use any machine learning libraries, but I relied heavily on numpy for the matrix operations. In the future I would expand on this project by adding more customizability, different models, and more optimization."
         ]),
         techStack: []
-    }),
-
-    createProject({
-        id: 5,
-        title: "vPython 3d Game",
-        githubLink: "https://www.glowscript.org/#/user/amatheson53/folder/MyPrograms/program/FinalGame",
-        date: "March, 2024",
-        image: vPythonImage,
-        shortDescription: "",
-        longDescription: createDescription([
-            "This is a game I created using vPython. The goal of the game is to push as many green balls into the center ring while preventing red balls from entering. You win if you score more green balls than red balls. The game ends when half the balls have been put in the goal. You can achieve a perfect game by letting in all the green balls and no red balls; however, this is easier said than done. To create the game, I had to implement collision physics and user controls."
-        ]),
-        techStack: [Python]
-    }),
-    createProject({
-        id: 6,
-        title: "Ant Colony Simulation",
-        githubLink: "https://github.com/AJM-L/AntColony",
-        date: "",
-        image: AntColonyImage,
-        shortDescription: "",
-        longDescription: createDescription([
-            "For this project, I played with idea of a digital ant colony. The ants begin at their nest and search out in random paths looking for food. Once they find food they release a pheromone that attracts  other ants and then return to their nest. The food automatically regenerates pseudo-randomly around existing nodes, and the simulation continues until it is manually stopped."
-        ]),
-        techStack: [Python]
-    }),
-    createProject({
-        id: 7,
-        title: "Mandelbrot Set",
-        githubLink: "https://github.com/AJM-L/Mandelbrot",
-        date: "",
-        image: MandelbrotImage,
-        shortDescription: "",
-        longDescription: createDescription([
-            "These are the images I created using the logic of the Mandelbrot set. The Mandelbrot set is a set of numbers in the complex plane C that remain bounded upon iterative application of the mandelbrot function. My script is able to render any discreet section of the mandelbrot set and supply the user with a jpg image file."
-        ]),
-        techStack: [Python]
-    }),
-    createProject({
-        id: 8,
-        title: "3d Wireframe Graphics Engine",
-        githubLink: "https://github.com/AJM-L/3dGraphRenderings",
-        date: "",
-        image: WireframeImage,
-        shortDescription: "",
-        longDescription: createDescription([
-            "Moving visualization of a 3 dimensional graph. I wanted to understand 3d graphics, so I programmed my own visualization software in pygame. It can take any 3d graph and rotate or move it in space. I have included examples of a simple rotating cube, and a random minimum spanning tree that I constructed by generating a random graph and running prims algorithm to construct its MST.",
-            "My program can display and rotate any 3-d graph and provides preset functions for displaying cubes, generating random graphs, and running various graph search and pruning algorithms. I used this opportunity to visualize several graph search and optimization algorithms including Kosaraju's algorithm, BFS and DFS, and prims algorithm (see image)."
-        ]),
-        techStack: [Python]
-    }),
-    createProject({
-        id: 9,
-        title: "Board Games",
-        githubLink: "https://github.com/AJM-L",
-        date: "",
-        image: TicTacToeImage,
-        shortDescription: "",
-        longDescription: createDescription([
-            "In order to practice my board game skills, I implemented recursive MinMax algorithms on tic tac toe and connect 4. My tic tac toe algorithm produces a win or a tie every time, and I have never beaten my connect 4 algorithm (however, it is not unbeatable). Both games are implemented using python and with a UI in the terminal."
-        ]),
-        techStack: [Python]
     }),
 ];
 
