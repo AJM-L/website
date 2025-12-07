@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.ffc1637b.css",
-    "main.js": "/website/static/js/main.074330c3.js",
+    "main.css": "/website/static/css/main.72608698.css",
+    "main.js": "/website/static/js/main.a9b32196.js",
+    "static/js/501.f1199568.chunk.js": "/website/static/js/501.f1199568.chunk.js",
     "static/js/453.5a111d56.chunk.js": "/website/static/js/453.5a111d56.chunk.js",
+    "static/js/312.18385b57.chunk.js": "/website/static/js/312.18385b57.chunk.js",
     "static/media/Poster1.png": "/website/static/media/Poster1.f71ee06fcf290d7a42f8.png",
     "static/media/Lizzie'sPoster.png": "/website/static/media/Lizzie'sPoster.2e7d1b2db0e5bb3d4f47.png",
     "static/media/Reach.png": "/website/static/media/Reach.9f3ecb3c759edad73fdf.png",
@@ -111,12 +113,14 @@
     "static/media/HTML5.svg": "/website/static/media/HTML5.8664168d5bc90b1a24396f85aadbf623.svg",
     "static/media/Kaggle.svg": "/website/static/media/Kaggle.cfe8af0d589d533643e982dee012ca1d.svg",
     "static/media/PyTorch.svg": "/website/static/media/PyTorch.091d29874e55ca1389ecf4a0eb434553.svg",
-    "main.ffc1637b.css.map": "/website/static/css/main.ffc1637b.css.map",
-    "main.074330c3.js.map": "/website/static/js/main.074330c3.js.map",
-    "453.5a111d56.chunk.js.map": "/website/static/js/453.5a111d56.chunk.js.map"
+    "main.72608698.css.map": "/website/static/css/main.72608698.css.map",
+    "main.a9b32196.js.map": "/website/static/js/main.a9b32196.js.map",
+    "501.f1199568.chunk.js.map": "/website/static/js/501.f1199568.chunk.js.map",
+    "453.5a111d56.chunk.js.map": "/website/static/js/453.5a111d56.chunk.js.map",
+    "312.18385b57.chunk.js.map": "/website/static/js/312.18385b57.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ffc1637b.css",
-    "static/js/main.074330c3.js"
+    "static/css/main.72608698.css",
+    "static/js/main.a9b32196.js"
   ]
 }
