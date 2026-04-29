@@ -29,6 +29,9 @@
  * }} Project
  */
 
+const baseUrl = import.meta.env.BASE_URL
+const assetUrl = (path) => `${baseUrl}${path.replace(/^(public\/|\/)+/, '')}`
+
 /** @type {Project[]} */
 export const projects = [
   {
@@ -168,7 +171,7 @@ I trained the network for 100-150 Epochs each and compiled an assortment of imag
       {
         type: 'gallery',
         heading: 'Generated Image Grids',
-        images: ["public/projects/pinterest-dcgan/grid-01.png", "public/projects/pinterest-dcgan/grid-02.png"],
+        images: [assetUrl("public/projects/pinterest-dcgan/grid-01.png"), assetUrl("public/projects/pinterest-dcgan/grid-02.png")],
       },
     ],
   },

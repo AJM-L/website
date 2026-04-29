@@ -55,24 +55,30 @@
   let textures = [];
   let mounted = false;
   let buildVersion = 0;
+  const baseUrl = import.meta.env.BASE_URL;
+
+  /** @param {string} path */
+  function assetUrl(path) {
+    return `${baseUrl}${path.replace(/^\/+/, '')}`;
+  }
 
   /** @param {string} id
    *  @param {string} [file]
    */
   async function loadGltfModel(id, file = 'model.glb') {
     const loader = new GLTFLoader();
-    return loader.loadAsync(`/models/${id}/${file}`);
+    return loader.loadAsync(assetUrl(`/models/${id}/${file}`));
   }
 
   /** @param {string} id */
   async function loadObjModel(id) {
     const mtlLoader = new MTLLoader();
-    mtlLoader.setPath(`/models/${id}/`);
+    mtlLoader.setPath(assetUrl(`/models/${id}/`));
     const materials = await mtlLoader.loadAsync('model.mtl');
     materials.preload();
     const objLoader = new OBJLoader();
     objLoader.setMaterials(materials);
-    objLoader.setPath(`/models/${id}/`);
+    objLoader.setPath(assetUrl(`/models/${id}/`));
     return objLoader.loadAsync('model.obj');
   }
 
