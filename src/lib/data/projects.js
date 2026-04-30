@@ -66,7 +66,7 @@ export const projects = [
     categories: ['Technical'],
     geometryType: 'torusKnot',
     modelType: 'obj',
-    modelScale: 0.5,
+    modelScale: 0.25,
     color: 0xd070c0,
     link: 'https://github.com/AJM-L/RenderingEngine'
   },
@@ -92,7 +92,7 @@ export const projects = [
     color: 0xe0a040,
     hasModel: true,
     modelType: 'gltf',
-    modelScale: 0.3,
+    modelScale: 0.2,
     sections: [
       {
         type: 'text',
@@ -184,9 +184,9 @@ I trained the network for 100-150 Epochs each and compiled an assortment of imag
     color: 0x40b0b0,
     hasModel: true,
     modelType: 'gltf',
-    modelScale: 8,
+    modelScale: 5,
     rotationAxes: { x: false, y: false, z: false },
-    transform: { y: -3 },
+    transform: { y: -2 },
     initialRotation: { x: 0, y: 2.7, z: 0 },
     sections: [
       { type: 'art-gallery' },

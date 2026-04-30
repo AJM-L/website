@@ -1,6 +1,8 @@
 <script>
+  const baseUrl = import.meta.env.BASE_URL;
+
   const links = [
-    { label: 'Resume', href: '/Resume/AJ_Matheson-Lieber_2026.pdf' },
+    { label: 'Resume', href: `${baseUrl}Resume/AJ_Matheson-Lieber_2026.pdf` },
     { label: 'Contact', href: 'mailto:amatheson53@students.claremontmckenna.edu' },
     { label: 'GitHub', href: 'https://github.com/ajm-l' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ajmathesonlieber' },

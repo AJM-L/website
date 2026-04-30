@@ -25,6 +25,14 @@
   const CAM_Y = 1.0;
   const CAM_Z = -5.5;
 
+  function showPreviousProject() {
+    virtualIndex--;
+  }
+
+  function showNextProject() {
+    virtualIndex++;
+  }
+
   /** @param {string} type */
   function createGeometry(type) {
     switch (type) {
@@ -488,7 +496,17 @@
     <p class="project-desc">{currentDescription}</p>
   </div>
   <div class="title-overlay">
+    <button class="project-nav prev" type="button" aria-label="Previous project" onclick={showPreviousProject}>
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M15 18l-6-6 6-6" />
+      </svg>
+    </button>
     <h1 class="project-title">{currentTitle}</h1>
+    <button class="project-nav next" type="button" aria-label="Next project" onclick={showNextProject}>
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9 6l6 6-6 6" />
+      </svg>
+    </button>
   </div>
 </div>
 
@@ -550,8 +568,11 @@
     bottom: 3rem;
     left: 0;
     right: 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: 2.25rem minmax(0, 34rem) 2.25rem;
+    align-items: center;
     justify-content: center;
+    gap: 0.85rem;
     pointer-events: none;
   }
 
@@ -563,11 +584,75 @@
     letter-spacing: -0.5px;
     margin: 10px;
     text-align: center;
+    min-width: 0;
+  }
+
+  .project-nav {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    pointer-events: auto;
+    padding: 0;
+    transition: color 0.2s, transform 0.2s;
+  }
+
+  .project-nav:hover,
+  .project-nav:focus-visible {
+    color: var(--text-h);
+    transform: translateY(-1px);
+  }
+
+  .project-nav:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .project-nav svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   @media (max-width: 768px) {
+    .title-overlay {
+      bottom: 3.2rem;
+      padding: 0 4rem;
+      display: flex;
+    }
+
     .project-title {
       font-size: 24px;
+    }
+
+    .project-nav {
+      position: fixed;
+      top: 50%;
+      z-index: 20;
+      width: 2.75rem;
+      height: 2.75rem;
+      transform: translateY(-50%);
+    }
+
+    .project-nav:hover,
+    .project-nav:focus-visible {
+      transform: translateY(calc(-50% - 1px));
+    }
+
+    .project-nav.prev {
+      left: 0.75rem;
+    }
+
+    .project-nav.next {
+      right: 0.75rem;
     }
   }
 </style>
