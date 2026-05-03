@@ -86,34 +86,10 @@ p {
   overflow-y: auto;
 }
 
-.sidebar-area {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 200px;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  container-type: size;
-}
-
 .bottom-area {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 10;
-}
-
-@media (max-width: 768px) {
-  .sidebar-area {
-    width: 100%;
-    bottom: auto;
-    justify-content: flex-start;
-    container-type: normal;
-  }
 }

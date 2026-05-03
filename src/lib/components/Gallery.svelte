@@ -5,7 +5,7 @@
   import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
   import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
-  /** @type {{ projects: Array<{id: string, title: string, description: string, categories: string[], geometryType: string, color: number, texture?: string, modelType?: 'obj' | 'gltf', hasModel?: boolean, modelFile?: string, modelScale?: number, rotationAxes?: {x?: boolean, y?: boolean, z?: boolean}, initialRotation?: {x?: number, y?: number, z?: number}, transform?: {x?: number, y?: number, z?: number}}>, onSelect: (project: any) => void }} */
+  /** @type {{ projects: Array<{id: string, title: string, description: string, geometryType: string, color: number, texture?: string, modelType?: 'obj' | 'gltf', hasModel?: boolean, modelFile?: string, modelScale?: number, rotationAxes?: {x?: boolean, y?: boolean, z?: boolean}, initialRotation?: {x?: number, y?: number, z?: number}, transform?: {x?: number, y?: number, z?: number}}>, onSelect: (project: any) => void }} */
   let { projects, onSelect } = $props();
 
   let canvas;

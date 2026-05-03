@@ -24,11 +24,6 @@
 
   <header>
     <div class="header-text">
-      <div class="meta">
-        {#each project.categories as category}
-          <span>{category}</span>
-        {/each}
-      </div>
       <h1>{project.title}</h1>
       <p class="description">{project.description}</p>
     </div>
@@ -106,21 +101,6 @@
     flex: 1;
     padding: 0 0 1.5rem;
     border-bottom: 1px solid color-mix(in srgb, var(--project-accent) 20%, var(--border));
-  }
-
-  .meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .meta span {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--project-accent);
   }
 
   h1 {
